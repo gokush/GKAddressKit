@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		34594F3E1A81FF97003118C0 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34594F3D1A81FF97003118C0 /* AddressCell.swift */; };
+		34594F421A820A89003118C0 /* province.json in Resources */ = {isa = PBXBuildFile; fileRef = 34594F411A820A89003118C0 /* province.json */; };
+		34594F481A821ED3003118C0 /* AddressEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34594F471A821ED3003118C0 /* AddressEditViewController.swift */; };
+		34594F4A1A821F5F003118C0 /* AreaPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34594F491A821F5F003118C0 /* AreaPicker.swift */; };
+		34594F4C1A8242A4003118C0 /* AddressEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34594F4B1A8242A4003118C0 /* AddressEditCell.swift */; };
+		34678DE91A6D075100245E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34678DE81A6D075100245E58 /* AppDelegate.swift */; };
+		34678DEB1A6D075100245E58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34678DEA1A6D075100245E58 /* ViewController.swift */; };
+		34678DEE1A6D075100245E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34678DEC1A6D075100245E58 /* Main.storyboard */; };
+		34678DF01A6D075100245E58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34678DEF1A6D075100245E58 /* Images.xcassets */; };
+		34678DF31A6D075100245E58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34678DF11A6D075100245E58 /* LaunchScreen.xib */; };
+		34678DFF1A6D075100245E58 /* GKAddressKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34678DFE1A6D075100245E58 /* GKAddressKitTests.swift */; };
+		34678E0B1A6D07C500245E58 /* FetchedResultsControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34678E091A6D07C500245E58 /* FetchedResultsControllerDataSource.swift */; };
+		34678E0C1A6D07C500245E58 /* PersistenStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34678E0A1A6D07C500245E58 /* PersistenStack.swift */; };
+		34678E0F1A6D083500245E58 /* GKAddressModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34678E0D1A6D083500245E58 /* GKAddressModel.xcdatamodeld */; };
+		34678E111A6D0B2700245E58 /* ProvinceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34678E101A6D0B2700245E58 /* ProvinceEntity.swift */; };
+		34678E131A6D0B2800245E58 /* CityEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34678E121A6D0B2800245E58 /* CityEntity.swift */; };
+		34678E151A6D0B2800245E58 /* DistrictEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34678E141A6D0B2800245E58 /* DistrictEntity.swift */; };
+		34678E171A6D0B2800245E58 /* AddressEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34678E161A6D0B2800245E58 /* AddressEntity.swift */; };
+		34678E191A6D112100245E58 /* ManagedObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34678E181A6D112100245E58 /* ManagedObject+Extensions.swift */; };
+		34DCB1941A6E738C00A7AD81 /* AddressRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DCB1931A6E738C00A7AD81 /* AddressRepository.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34678DF91A6D075100245E58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34678DDB1A6D075100245E58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34678DE21A6D075100245E58;
+			remoteInfo = GKAddressKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		34594F3D1A81FF97003118C0 /* AddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
+		34594F411A820A89003118C0 /* province.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province.json; sourceTree = "<group>"; };
+		34594F471A821ED3003118C0 /* AddressEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressEditViewController.swift; sourceTree = "<group>"; };
+		34594F491A821F5F003118C0 /* AreaPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaPicker.swift; sourceTree = "<group>"; };
+		34594F4B1A8242A4003118C0 /* AddressEditCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressEditCell.swift; sourceTree = "<group>"; };
+		34678DE31A6D075100245E58 /* GKAddressKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GKAddressKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		34678DE71A6D075100245E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34678DE81A6D075100245E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		34678DEA1A6D075100245E58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		34678DED1A6D075100245E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		34678DEF1A6D075100245E58 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		34678DF21A6D075100245E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		34678DF81A6D075100245E58 /* GKAddressKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GKAddressKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34678DFD1A6D075100245E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34678DFE1A6D075100245E58 /* GKAddressKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKAddressKitTests.swift; sourceTree = "<group>"; };
+		34678E091A6D07C500245E58 /* FetchedResultsControllerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsControllerDataSource.swift; sourceTree = "<group>"; };
+		34678E0A1A6D07C500245E58 /* PersistenStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenStack.swift; sourceTree = "<group>"; };
+		34678E0E1A6D083500245E58 /* GKAddressModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GKAddressModel.xcdatamodel; sourceTree = "<group>"; };
+		34678E101A6D0B2700245E58 /* ProvinceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceEntity.swift; sourceTree = "<group>"; };
+		34678E121A6D0B2800245E58 /* CityEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityEntity.swift; sourceTree = "<group>"; };
+		34678E141A6D0B2800245E58 /* DistrictEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistrictEntity.swift; sourceTree = "<group>"; };
+		34678E161A6D0B2800245E58 /* AddressEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressEntity.swift; sourceTree = "<group>"; };
+		34678E181A6D112100245E58 /* ManagedObject+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ManagedObject+Extensions.swift"; sourceTree = "<group>"; };
+		34DCB1931A6E738C00A7AD81 /* AddressRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressRepository.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34678DE01A6D075100245E58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34678DF51A6D075100245E58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34678DDA1A6D075100245E58 = {
+			isa = PBXGroup;
+			children = (
+				34678DE51A6D075100245E58 /* GKAddressKit */,
+				34678DFB1A6D075100245E58 /* GKAddressKitTests */,
+				34678DE41A6D075100245E58 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		34678DE41A6D075100245E58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34678DE31A6D075100245E58 /* GKAddressKit.app */,
+				34678DF81A6D075100245E58 /* GKAddressKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34678DE51A6D075100245E58 /* GKAddressKit */ = {
+			isa = PBXGroup;
+			children = (
+				34678E081A6D07C500245E58 /* Address */,
+				34594F4B1A8242A4003118C0 /* AddressEditCell.swift */,
+				34594F491A821F5F003118C0 /* AreaPicker.swift */,
+				34678DE81A6D075100245E58 /* AppDelegate.swift */,
+				34678DEA1A6D075100245E58 /* ViewController.swift */,
+				34594F471A821ED3003118C0 /* AddressEditViewController.swift */,
+				34678DEC1A6D075100245E58 /* Main.storyboard */,
+				34678DEF1A6D075100245E58 /* Images.xcassets */,
+				34678DF11A6D075100245E58 /* LaunchScreen.xib */,
+				34678DE61A6D075100245E58 /* Supporting Files */,
+				34594F3D1A81FF97003118C0 /* AddressCell.swift */,
+				34594F411A820A89003118C0 /* province.json */,
+			);
+			path = GKAddressKit;
+			sourceTree = "<group>";
+		};
+		34678DE61A6D075100245E58 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				34678DE71A6D075100245E58 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		34678DFB1A6D075100245E58 /* GKAddressKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				34678DFE1A6D075100245E58 /* GKAddressKitTests.swift */,
+				34678DFC1A6D075100245E58 /* Supporting Files */,
+			);
+			path = GKAddressKitTests;
+			sourceTree = "<group>";
+		};
+		34678DFC1A6D075100245E58 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				34678DFD1A6D075100245E58 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		34678E081A6D07C500245E58 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				34678E091A6D07C500245E58 /* FetchedResultsControllerDataSource.swift */,
+				34678E0A1A6D07C500245E58 /* PersistenStack.swift */,
+				34678E0D1A6D083500245E58 /* GKAddressModel.xcdatamodeld */,
+				34678E161A6D0B2800245E58 /* AddressEntity.swift */,
+				34678E141A6D0B2800245E58 /* DistrictEntity.swift */,
+				34678E121A6D0B2800245E58 /* CityEntity.swift */,
+				34678E101A6D0B2700245E58 /* ProvinceEntity.swift */,
+				34678E181A6D112100245E58 /* ManagedObject+Extensions.swift */,
+				34DCB1931A6E738C00A7AD81 /* AddressRepository.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34678DE21A6D075100245E58 /* GKAddressKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34678E021A6D075100245E58 /* Build configuration list for PBXNativeTarget "GKAddressKit" */;
+			buildPhases = (
+				34678DDF1A6D075100245E58 /* Sources */,
+				34678DE01A6D075100245E58 /* Frameworks */,
+				34678DE11A6D075100245E58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GKAddressKit;
+			productName = GKAddressKit;
+			productReference = 34678DE31A6D075100245E58 /* GKAddressKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		34678DF71A6D075100245E58 /* GKAddressKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34678E051A6D075100245E58 /* Build configuration list for PBXNativeTarget "GKAddressKitTests" */;
+			buildPhases = (
+				34678DF41A6D075100245E58 /* Sources */,
+				34678DF51A6D075100245E58 /* Frameworks */,
+				34678DF61A6D075100245E58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34678DFA1A6D075100245E58 /* PBXTargetDependency */,
+			);
+			name = GKAddressKitTests;
+			productName = GKAddressKitTests;
+			productReference = 34678DF81A6D075100245E58 /* GKAddressKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34678DDB1A6D075100245E58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = tongxiaobo;
+				TargetAttributes = {
+					34678DE21A6D075100245E58 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					34678DF71A6D075100245E58 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 34678DE21A6D075100245E58;
+					};
+				};
+			};
+			buildConfigurationList = 34678DDE1A6D075100245E58 /* Build configuration list for PBXProject "GKAddressKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 34678DDA1A6D075100245E58;
+			productRefGroup = 34678DE41A6D075100245E58 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34678DE21A6D075100245E58 /* GKAddressKit */,
+				34678DF71A6D075100245E58 /* GKAddressKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		34678DE11A6D075100245E58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34678DEE1A6D075100245E58 /* Main.storyboard in Resources */,
+				34678DF31A6D075100245E58 /* LaunchScreen.xib in Resources */,
+				34678DF01A6D075100245E58 /* Images.xcassets in Resources */,
+				34594F421A820A89003118C0 /* province.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34678DF61A6D075100245E58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34678DDF1A6D075100245E58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34678E191A6D112100245E58 /* ManagedObject+Extensions.swift in Sources */,
+				34678DEB1A6D075100245E58 /* ViewController.swift in Sources */,
+				34678E0B1A6D07C500245E58 /* FetchedResultsControllerDataSource.swift in Sources */,
+				34678E151A6D0B2800245E58 /* DistrictEntity.swift in Sources */,
+				34594F481A821ED3003118C0 /* AddressEditViewController.swift in Sources */,
+				34678E111A6D0B2700245E58 /* ProvinceEntity.swift in Sources */,
+				34678E0F1A6D083500245E58 /* GKAddressModel.xcdatamodeld in Sources */,
+				34678E0C1A6D07C500245E58 /* PersistenStack.swift in Sources */,
+				34678DE91A6D075100245E58 /* AppDelegate.swift in Sources */,
+				34594F4C1A8242A4003118C0 /* AddressEditCell.swift in Sources */,
+				34DCB1941A6E738C00A7AD81 /* AddressRepository.swift in Sources */,
+				34594F4A1A821F5F003118C0 /* AreaPicker.swift in Sources */,
+				34678E131A6D0B2800245E58 /* CityEntity.swift in Sources */,
+				34594F3E1A81FF97003118C0 /* AddressCell.swift in Sources */,
+				34678E171A6D0B2800245E58 /* AddressEntity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34678DF41A6D075100245E58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34678DFF1A6D075100245E58 /* GKAddressKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		34678DFA1A6D075100245E58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34678DE21A6D075100245E58 /* GKAddressKit */;
+			targetProxy = 34678DF91A6D075100245E58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		34678DEC1A6D075100245E58 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34678DED1A6D075100245E58 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		34678DF11A6D075100245E58 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34678DF21A6D075100245E58 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		34678E001A6D075100245E58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		34678E011A6D075100245E58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		34678E031A6D075100245E58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GKAddressKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		34678E041A6D075100245E58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GKAddressKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		34678E061A6D075100245E58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GKAddressKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GKAddressKit.app/GKAddressKit";
+			};
+			name = Debug;
+		};
+		34678E071A6D075100245E58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GKAddressKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GKAddressKit.app/GKAddressKit";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34678DDE1A6D075100245E58 /* Build configuration list for PBXProject "GKAddressKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34678E001A6D075100245E58 /* Debug */,
+				34678E011A6D075100245E58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34678E021A6D075100245E58 /* Build configuration list for PBXNativeTarget "GKAddressKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34678E031A6D075100245E58 /* Debug */,
+				34678E041A6D075100245E58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34678E051A6D075100245E58 /* Build configuration list for PBXNativeTarget "GKAddressKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34678E061A6D075100245E58 /* Debug */,
+				34678E071A6D075100245E58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		34678E0D1A6D083500245E58 /* GKAddressModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				34678E0E1A6D083500245E58 /* GKAddressModel.xcdatamodel */,
+			);
+			currentVersion = 34678E0E1A6D083500245E58 /* GKAddressModel.xcdatamodel */;
+			path = GKAddressModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 34678DDB1A6D075100245E58 /* Project object */;
+}
