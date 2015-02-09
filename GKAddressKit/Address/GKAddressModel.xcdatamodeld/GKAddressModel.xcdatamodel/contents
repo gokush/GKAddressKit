@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6735" systemVersion="14C109" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AddressEntity" representedClassName="AddressEntity" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="addressId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="cellphone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDefault" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postcode" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CityEntity" inverseName="addresses" inverseEntity="CityEntity" syncable="YES"/>
+        <relationship name="district" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DistrictEntity" inverseName="addresses" inverseEntity="DistrictEntity" syncable="YES"/>
+        <relationship name="province" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProvinceEntity" inverseName="addresses" inverseEntity="ProvinceEntity" syncable="YES"/>
+    </entity>
+    <entity name="CityEntity" representedClassName="CityEntity" syncable="YES">
+        <attribute name="cityId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pinyin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="refresh" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="addresses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AddressEntity" inverseName="city" inverseEntity="AddressEntity" syncable="YES"/>
+        <relationship name="districts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DistrictEntity" inverseName="city" inverseEntity="DistrictEntity" syncable="YES"/>
+        <relationship name="province" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProvinceEntity" inverseName="cities" inverseEntity="ProvinceEntity" syncable="YES"/>
+    </entity>
+    <entity name="DistrictEntity" representedClassName="DistrictEntity" syncable="YES">
+        <attribute name="districtId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pinyin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="refresh" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="addresses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AddressEntity" inverseName="district" inverseEntity="AddressEntity" syncable="YES"/>
+        <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CityEntity" inverseName="districts" inverseEntity="CityEntity" syncable="YES"/>
+    </entity>
+    <entity name="ProvinceEntity" representedClassName="ProvinceEntity" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pinyin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="provinceId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="refresh" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="addresses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AddressEntity" inverseName="province" inverseEntity="AddressEntity" syncable="YES"/>
+        <relationship name="cities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CityEntity" inverseName="province" inverseEntity="CityEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AddressEntity" positionX="27" positionY="72" width="128" height="180"/>
+        <element name="CityEntity" positionX="-18" positionY="27" width="128" height="150"/>
+        <element name="DistrictEntity" positionX="9" positionY="45" width="128" height="135"/>
+        <element name="ProvinceEntity" positionX="-45" positionY="0" width="128" height="135"/>
+    </elements>
+</model>
