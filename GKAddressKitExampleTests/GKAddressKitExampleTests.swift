@@ -1,15 +1,15 @@
 //
-//  GKAddressKitTests.swift
-//  GKAddressKitTests
+//  GKAddressKitExampleTests.swift
+//  GKAddressKitExampleTests
 //
-//  Created by 童小波 on 15/1/19.
-//  Copyright (c) 2015年 tongxiaobo. All rights reserved.
+//  Created by 小悟空 on 2/19/15.
+//  Copyright (c) 2015 Goku. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class GKAddressKitTests: XCTestCase {
+class GKAddressKitExampleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
