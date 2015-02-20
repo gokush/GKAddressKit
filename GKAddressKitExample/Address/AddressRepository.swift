@@ -18,10 +18,14 @@ class AddressRepository: NSObject {
         }
         return Static.instance
     }
-    
+  
+    /*
+     * 方法重写在Objective-C中不可用
+  
     func deleteAddress(addressID: Int){
         
     }
+    */
     
     func deleteAddress(address: AddressEntity){
         self.managedObjectContext?.deleteObject(address)

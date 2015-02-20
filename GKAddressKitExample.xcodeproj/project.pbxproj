@@ -1,1290 +1,641 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>1786703DF877FACAB81F3BAB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-GKAddressKitExample/Pods-GKAddressKitExample-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>3D56F4A7244119164A3C8998</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>72155A40B05FFF74308C78E2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A59B54D707C6B281AF6AC9ED</string>
-				<string>78418E27FE5D146F33ABEEBD</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>78418E27FE5D146F33ABEEBD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-GKAddressKitExample.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-GKAddressKitExample/Pods-GKAddressKitExample.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A59B54D707C6B281AF6AC9ED</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-GKAddressKitExample.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-GKAddressKitExample/Pods-GKAddressKitExample.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1CE75E3FBD8F1093B1513C8</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-GKAddressKitExample.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>E098A35B3CB3E7ABB9CB82CE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C1CE75E3FBD8F1093B1513C8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFA51A96293000C628B3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E56FEFB01A96293100C628B3</string>
-				<string>E56FEFC91A96293100C628B3</string>
-				<string>E56FEFAF1A96293100C628B3</string>
-				<string>72155A40B05FFF74308C78E2</string>
-				<string>E098A35B3CB3E7ABB9CB82CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFA61A96293000C628B3</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0610</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Goku</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>E56FEFAD1A96293100C628B3</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.1.1</string>
-					</dict>
-					<key>E56FEFC51A96293100C628B3</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.1.1</string>
-						<key>TestTargetID</key>
-						<string>E56FEFAD1A96293100C628B3</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>E56FEFA91A96293000C628B3</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>E56FEFA51A96293000C628B3</string>
-			<key>productRefGroup</key>
-			<string>E56FEFAF1A96293100C628B3</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>E56FEFAD1A96293100C628B3</string>
-				<string>E56FEFC51A96293100C628B3</string>
-			</array>
-		</dict>
-		<key>E56FEFA91A96293000C628B3</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>E56FEFCE1A96293100C628B3</string>
-				<string>E56FEFCF1A96293100C628B3</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>E56FEFAA1A96293100C628B3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E56FEFB91A96293100C628B3</string>
-				<string>E56FEFF11A962B5A00C628B3</string>
-				<string>E56FEFF71A962B5A00C628B3</string>
-				<string>E56FEFF61A962B5A00C628B3</string>
-				<string>E56FEFEF1A962B5A00C628B3</string>
-				<string>E56FEFF01A962B5A00C628B3</string>
-				<string>E56FEFB71A96293100C628B3</string>
-				<string>E56FEFE21A96297300C628B3</string>
-				<string>E56FEFF21A962B5A00C628B3</string>
-				<string>E56FEFF41A962B5A00C628B3</string>
-				<string>E56FEFF31A962B5A00C628B3</string>
-				<string>E56FEFDE1A96297300C628B3</string>
-				<string>E56FEFF51A962B5A00C628B3</string>
-				<string>E56FEFE01A96297300C628B3</string>
-				<string>E56FEFB41A96293100C628B3</string>
-				<string>E56FEFDF1A96297300C628B3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E56FEFAB1A96293100C628B3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E8EA7BD7D2B2C682DEDE9556</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E56FEFAC1A96293100C628B3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E56FEFBC1A96293100C628B3</string>
-				<string>E56FEFC11A96293100C628B3</string>
-				<string>E56FEFBE1A96293100C628B3</string>
-				<string>E56FEFF91A962B7A00C628B3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E56FEFAD1A96293100C628B3</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>E56FEFD01A96293100C628B3</string>
-			<key>buildPhases</key>
-			<array>
-				<string>3D56F4A7244119164A3C8998</string>
-				<string>E56FEFAA1A96293100C628B3</string>
-				<string>E56FEFAB1A96293100C628B3</string>
-				<string>E56FEFAC1A96293100C628B3</string>
-				<string>1786703DF877FACAB81F3BAB</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>GKAddressKitExample</string>
-			<key>productName</key>
-			<string>GKAddressKitExample</string>
-			<key>productReference</key>
-			<string>E56FEFAE1A96293100C628B3</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>E56FEFAE1A96293100C628B3</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>GKAddressKitExample.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>E56FEFAF1A96293100C628B3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E56FEFAE1A96293100C628B3</string>
-				<string>E56FEFC61A96293100C628B3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFB01A96293100C628B3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E56FEFE41A962B5A00C628B3</string>
-				<string>E56FEFD71A96297300C628B3</string>
-				<string>E56FEFD81A96297300C628B3</string>
-				<string>E56FEFD91A96297300C628B3</string>
-				<string>E56FEFDB1A96297300C628B3</string>
-				<string>E56FEFB31A96293100C628B3</string>
-				<string>E56FEFB81A96293100C628B3</string>
-				<string>E56FEFBA1A96293100C628B3</string>
-				<string>E56FEFBD1A96293100C628B3</string>
-				<string>E56FEFBF1A96293100C628B3</string>
-				<string>E56FEFB51A96293100C628B3</string>
-				<string>E56FEFF81A962B7A00C628B3</string>
-				<string>E56FEFB11A96293100C628B3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>GKAddressKitExample</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFB11A96293100C628B3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E56FEFB21A96293100C628B3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFB21A96293100C628B3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFB31A96293100C628B3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFB41A96293100C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFB31A96293100C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFB51A96293100C628B3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E56FEFB61A96293100C628B3</string>
-			</array>
-			<key>currentVersion</key>
-			<string>E56FEFB61A96293100C628B3</string>
-			<key>isa</key>
-			<string>XCVersionGroup</string>
-			<key>path</key>
-			<string>GKAddressKitExample.xcdatamodeld</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-			<key>versionGroupType</key>
-			<string>wrapper.xcdatamodel</string>
-		</dict>
-		<key>E56FEFB61A96293100C628B3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.xcdatamodel</string>
-			<key>path</key>
-			<string>GKAddressKitExample.xcdatamodel</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFB71A96293100C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFB51A96293100C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFB81A96293100C628B3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFB91A96293100C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFB81A96293100C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFBA1A96293100C628B3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E56FEFBB1A96293100C628B3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFBB1A96293100C628B3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFBC1A96293100C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFBA1A96293100C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFBD1A96293100C628B3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFBE1A96293100C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFBD1A96293100C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFBF1A96293100C628B3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E56FEFC01A96293100C628B3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFC01A96293100C628B3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFC11A96293100C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFBF1A96293100C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFC21A96293100C628B3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E56FEFCD1A96293100C628B3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E56FEFC31A96293100C628B3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E56FEFC41A96293100C628B3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E56FEFC51A96293100C628B3</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>E56FEFD31A96293100C628B3</string>
-			<key>buildPhases</key>
-			<array>
-				<string>E56FEFC21A96293100C628B3</string>
-				<string>E56FEFC31A96293100C628B3</string>
-				<string>E56FEFC41A96293100C628B3</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>E56FEFC81A96293100C628B3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>GKAddressKitExampleTests</string>
-			<key>productName</key>
-			<string>GKAddressKitExampleTests</string>
-			<key>productReference</key>
-			<string>E56FEFC61A96293100C628B3</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>E56FEFC61A96293100C628B3</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>GKAddressKitExampleTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>E56FEFC71A96293100C628B3</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>E56FEFA61A96293000C628B3</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>E56FEFAD1A96293100C628B3</string>
-			<key>remoteInfo</key>
-			<string>GKAddressKitExample</string>
-		</dict>
-		<key>E56FEFC81A96293100C628B3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>E56FEFAD1A96293100C628B3</string>
-			<key>targetProxy</key>
-			<string>E56FEFC71A96293100C628B3</string>
-		</dict>
-		<key>E56FEFC91A96293100C628B3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E56FEFCC1A96293100C628B3</string>
-				<string>E56FEFCA1A96293100C628B3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>GKAddressKitExampleTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFCA1A96293100C628B3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E56FEFCB1A96293100C628B3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFCB1A96293100C628B3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFCC1A96293100C628B3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>GKAddressKitExampleTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFCD1A96293100C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFCC1A96293100C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFCE1A96293100C628B3</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>E56FEFCF1A96293100C628B3</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>E56FEFD01A96293100C628B3</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>E56FEFD11A96293100C628B3</string>
-				<string>E56FEFD21A96293100C628B3</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>E56FEFD11A96293100C628B3</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A59B54D707C6B281AF6AC9ED</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>GKAddressKitExample/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>E56FEFD21A96293100C628B3</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>78418E27FE5D146F33ABEEBD</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>GKAddressKitExample/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>E56FEFD31A96293100C628B3</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>E56FEFD41A96293100C628B3</string>
-				<string>E56FEFD51A96293100C628B3</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>E56FEFD41A96293100C628B3</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>GKAddressKitExampleTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/GKAddressKitExample.app/GKAddressKitExample</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>E56FEFD51A96293100C628B3</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>GKAddressKitExampleTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/GKAddressKitExample.app/GKAddressKitExample</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>E56FEFD71A96297300C628B3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AddressCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFD81A96297300C628B3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AddressEditCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFD91A96297300C628B3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AddressEditViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFDB1A96297300C628B3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AreaPicker.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFDE1A96297300C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFD71A96297300C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFDF1A96297300C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFD81A96297300C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFE01A96297300C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFD91A96297300C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFE21A96297300C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFDB1A96297300C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFE41A962B5A00C628B3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E56FEFE51A962B5A00C628B3</string>
-				<string>E56FEFE61A962B5A00C628B3</string>
-				<string>E56FEFE71A962B5A00C628B3</string>
-				<string>E56FEFE81A962B5A00C628B3</string>
-				<string>E56FEFE91A962B5A00C628B3</string>
-				<string>E56FEFEA1A962B5A00C628B3</string>
-				<string>E56FEFEC1A962B5A00C628B3</string>
-				<string>E56FEFED1A962B5A00C628B3</string>
-				<string>E56FEFEE1A962B5A00C628B3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Address</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFE51A962B5A00C628B3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AddressEntity.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFE61A962B5A00C628B3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AddressRepository.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFE71A962B5A00C628B3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CityEntity.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFE81A962B5A00C628B3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DistrictEntity.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFE91A962B5A00C628B3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>FetchedResultsControllerDataSource.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFEA1A962B5A00C628B3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E56FEFEB1A962B5A00C628B3</string>
-			</array>
-			<key>currentVersion</key>
-			<string>E56FEFEB1A962B5A00C628B3</string>
-			<key>isa</key>
-			<string>XCVersionGroup</string>
-			<key>path</key>
-			<string>GKAddressModel.xcdatamodeld</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-			<key>versionGroupType</key>
-			<string>wrapper.xcdatamodel</string>
-		</dict>
-		<key>E56FEFEB1A962B5A00C628B3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.xcdatamodel</string>
-			<key>path</key>
-			<string>GKAddressModel.xcdatamodel</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFEC1A962B5A00C628B3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ManagedObject+Extensions.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFED1A962B5A00C628B3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PersistenStack.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFEE1A962B5A00C628B3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ProvinceEntity.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFEF1A962B5A00C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFE51A962B5A00C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFF01A962B5A00C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFE61A962B5A00C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFF11A962B5A00C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFE71A962B5A00C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFF21A962B5A00C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFE81A962B5A00C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFF31A962B5A00C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFE91A962B5A00C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFF41A962B5A00C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFEA1A962B5A00C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFF51A962B5A00C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFEC1A962B5A00C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFF61A962B5A00C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFED1A962B5A00C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFF71A962B5A00C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFEE1A962B5A00C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56FEFF81A962B7A00C628B3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.json</string>
-			<key>path</key>
-			<string>province.json</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E56FEFF91A962B7A00C628B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56FEFF81A962B7A00C628B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E8EA7BD7D2B2C682DEDE9556</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1CE75E3FBD8F1093B1513C8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>E56FEFA61A96293000C628B3</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E56FEFB41A96293100C628B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFB31A96293100C628B3 /* AppDelegate.swift */; };
+		E56FEFB71A96293100C628B3 /* GKAddressKitExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFB51A96293100C628B3 /* GKAddressKitExample.xcdatamodeld */; };
+		E56FEFB91A96293100C628B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFB81A96293100C628B3 /* ViewController.swift */; };
+		E56FEFBC1A96293100C628B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56FEFBA1A96293100C628B3 /* Main.storyboard */; };
+		E56FEFBE1A96293100C628B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56FEFBD1A96293100C628B3 /* Images.xcassets */; };
+		E56FEFC11A96293100C628B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56FEFBF1A96293100C628B3 /* LaunchScreen.xib */; };
+		E56FEFCD1A96293100C628B3 /* GKAddressKitExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFCC1A96293100C628B3 /* GKAddressKitExampleTests.swift */; };
+		E56FEFDE1A96297300C628B3 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFD71A96297300C628B3 /* AddressCell.swift */; };
+		E56FEFDF1A96297300C628B3 /* AddressEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFD81A96297300C628B3 /* AddressEditCell.swift */; };
+		E56FEFE01A96297300C628B3 /* AddressEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFD91A96297300C628B3 /* AddressEditViewController.swift */; };
+		E56FEFE21A96297300C628B3 /* AreaPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFDB1A96297300C628B3 /* AreaPicker.swift */; };
+		E56FEFEF1A962B5A00C628B3 /* AddressEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFE51A962B5A00C628B3 /* AddressEntity.swift */; };
+		E56FEFF01A962B5A00C628B3 /* AddressRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFE61A962B5A00C628B3 /* AddressRepository.swift */; };
+		E56FEFF11A962B5A00C628B3 /* CityEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFE71A962B5A00C628B3 /* CityEntity.swift */; };
+		E56FEFF21A962B5A00C628B3 /* DistrictEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFE81A962B5A00C628B3 /* DistrictEntity.swift */; };
+		E56FEFF31A962B5A00C628B3 /* FetchedResultsControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFE91A962B5A00C628B3 /* FetchedResultsControllerDataSource.swift */; };
+		E56FEFF41A962B5A00C628B3 /* GKAddressModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFEA1A962B5A00C628B3 /* GKAddressModel.xcdatamodeld */; };
+		E56FEFF51A962B5A00C628B3 /* ManagedObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFEC1A962B5A00C628B3 /* ManagedObject+Extensions.swift */; };
+		E56FEFF61A962B5A00C628B3 /* PersistenStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFED1A962B5A00C628B3 /* PersistenStack.swift */; };
+		E56FEFF71A962B5A00C628B3 /* ProvinceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFEE1A962B5A00C628B3 /* ProvinceEntity.swift */; };
+		E56FEFF91A962B7A00C628B3 /* province.json in Resources */ = {isa = PBXBuildFile; fileRef = E56FEFF81A962B7A00C628B3 /* province.json */; };
+		E56FEFFE1A962D7100C628B3 /* GKRegionBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFFD1A962D7100C628B3 /* GKRegionBackend.m */; };
+		E56FF0071A963BD000C628B3 /* GKAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF0061A963BD000C628B3 /* GKAddress.m */; };
+		E56FF0201A963F9100C628B3 /* GKCity.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF0151A963F9100C628B3 /* GKCity.m */; };
+		E56FF0211A963F9100C628B3 /* GKCounty.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF0171A963F9100C628B3 /* GKCounty.m */; };
+		E56FF0221A963F9100C628B3 /* GKProvince.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF0191A963F9100C628B3 /* GKProvince.m */; };
+		E56FF0231A963F9100C628B3 /* GKTown.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF01B1A963F9100C628B3 /* GKTown.m */; };
+		E56FF0241A963F9100C628B3 /* GKVillage.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF01D1A963F9100C628B3 /* GKVillage.m */; };
+		E56FF0251A963F9100C628B3 /* GKRegionPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF01F1A963F9100C628B3 /* GKRegionPickerView.m */; };
+		E8EA7BD7D2B2C682DEDE9556 /* libPods-GKAddressKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CE75E3FBD8F1093B1513C8 /* libPods-GKAddressKitExample.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E56FEFC71A96293100C628B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E56FEFA61A96293000C628B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E56FEFAD1A96293100C628B3;
+			remoteInfo = GKAddressKitExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		78418E27FE5D146F33ABEEBD /* Pods-GKAddressKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKAddressKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-GKAddressKitExample/Pods-GKAddressKitExample.release.xcconfig"; sourceTree = "<group>"; };
+		A59B54D707C6B281AF6AC9ED /* Pods-GKAddressKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKAddressKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKAddressKitExample/Pods-GKAddressKitExample.debug.xcconfig"; sourceTree = "<group>"; };
+		C1CE75E3FBD8F1093B1513C8 /* libPods-GKAddressKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKAddressKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E56FEFAE1A96293100C628B3 /* GKAddressKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GKAddressKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E56FEFB21A96293100C628B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E56FEFB31A96293100C628B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E56FEFB61A96293100C628B3 /* GKAddressKitExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GKAddressKitExample.xcdatamodel; sourceTree = "<group>"; };
+		E56FEFB81A96293100C628B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E56FEFBB1A96293100C628B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E56FEFBD1A96293100C628B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E56FEFC01A96293100C628B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E56FEFC61A96293100C628B3 /* GKAddressKitExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GKAddressKitExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E56FEFCB1A96293100C628B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E56FEFCC1A96293100C628B3 /* GKAddressKitExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKAddressKitExampleTests.swift; sourceTree = "<group>"; };
+		E56FEFD71A96297300C628B3 /* AddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
+		E56FEFD81A96297300C628B3 /* AddressEditCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressEditCell.swift; sourceTree = "<group>"; };
+		E56FEFD91A96297300C628B3 /* AddressEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressEditViewController.swift; sourceTree = "<group>"; };
+		E56FEFDB1A96297300C628B3 /* AreaPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaPicker.swift; sourceTree = "<group>"; };
+		E56FEFE51A962B5A00C628B3 /* AddressEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressEntity.swift; sourceTree = "<group>"; };
+		E56FEFE61A962B5A00C628B3 /* AddressRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressRepository.swift; sourceTree = "<group>"; };
+		E56FEFE71A962B5A00C628B3 /* CityEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityEntity.swift; sourceTree = "<group>"; };
+		E56FEFE81A962B5A00C628B3 /* DistrictEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistrictEntity.swift; sourceTree = "<group>"; };
+		E56FEFE91A962B5A00C628B3 /* FetchedResultsControllerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsControllerDataSource.swift; sourceTree = "<group>"; };
+		E56FEFEB1A962B5A00C628B3 /* GKAddressModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GKAddressModel.xcdatamodel; sourceTree = "<group>"; };
+		E56FEFEC1A962B5A00C628B3 /* ManagedObject+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ManagedObject+Extensions.swift"; sourceTree = "<group>"; };
+		E56FEFED1A962B5A00C628B3 /* PersistenStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenStack.swift; sourceTree = "<group>"; };
+		E56FEFEE1A962B5A00C628B3 /* ProvinceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceEntity.swift; sourceTree = "<group>"; };
+		E56FEFF81A962B7A00C628B3 /* province.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province.json; sourceTree = "<group>"; };
+		E56FEFFC1A962D7100C628B3 /* GKRegionBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegionBackend.h; sourceTree = "<group>"; };
+		E56FEFFD1A962D7100C628B3 /* GKRegionBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegionBackend.m; sourceTree = "<group>"; };
+		E56FEFFF1A962D9A00C628B3 /* GKAddressKitExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GKAddressKitExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		E56FF0051A963BD000C628B3 /* GKAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddress.h; sourceTree = "<group>"; };
+		E56FF0061A963BD000C628B3 /* GKAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAddress.m; sourceTree = "<group>"; };
+		E56FF0141A963F9100C628B3 /* GKCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKCity.h; sourceTree = "<group>"; };
+		E56FF0151A963F9100C628B3 /* GKCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKCity.m; sourceTree = "<group>"; };
+		E56FF0161A963F9100C628B3 /* GKCounty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKCounty.h; sourceTree = "<group>"; };
+		E56FF0171A963F9100C628B3 /* GKCounty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKCounty.m; sourceTree = "<group>"; };
+		E56FF0181A963F9100C628B3 /* GKProvince.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKProvince.h; sourceTree = "<group>"; };
+		E56FF0191A963F9100C628B3 /* GKProvince.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKProvince.m; sourceTree = "<group>"; };
+		E56FF01A1A963F9100C628B3 /* GKTown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKTown.h; sourceTree = "<group>"; };
+		E56FF01B1A963F9100C628B3 /* GKTown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKTown.m; sourceTree = "<group>"; };
+		E56FF01C1A963F9100C628B3 /* GKVillage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKVillage.h; sourceTree = "<group>"; };
+		E56FF01D1A963F9100C628B3 /* GKVillage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKVillage.m; sourceTree = "<group>"; };
+		E56FF01E1A963F9100C628B3 /* GKRegionPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegionPickerView.h; sourceTree = "<group>"; };
+		E56FF01F1A963F9100C628B3 /* GKRegionPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegionPickerView.m; sourceTree = "<group>"; };
+		E56FF0261A96402500C628B3 /* GKAddressService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddressService.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E56FEFAB1A96293100C628B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8EA7BD7D2B2C682DEDE9556 /* libPods-GKAddressKitExample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E56FEFC31A96293100C628B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72155A40B05FFF74308C78E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A59B54D707C6B281AF6AC9ED /* Pods-GKAddressKitExample.debug.xcconfig */,
+				78418E27FE5D146F33ABEEBD /* Pods-GKAddressKitExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E098A35B3CB3E7ABB9CB82CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1CE75E3FBD8F1093B1513C8 /* libPods-GKAddressKitExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E56FEFA51A96293000C628B3 = {
+			isa = PBXGroup;
+			children = (
+				E56FEFFA1A962D4400C628B3 /* GKAddressKit */,
+				E56FEFB01A96293100C628B3 /* GKAddressKitExample */,
+				E56FEFC91A96293100C628B3 /* GKAddressKitExampleTests */,
+				E56FEFAF1A96293100C628B3 /* Products */,
+				72155A40B05FFF74308C78E2 /* Pods */,
+				E098A35B3CB3E7ABB9CB82CE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E56FEFAF1A96293100C628B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E56FEFAE1A96293100C628B3 /* GKAddressKitExample.app */,
+				E56FEFC61A96293100C628B3 /* GKAddressKitExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E56FEFB01A96293100C628B3 /* GKAddressKitExample */ = {
+			isa = PBXGroup;
+			children = (
+				E56FEFFF1A962D9A00C628B3 /* GKAddressKitExample-Bridging-Header.h */,
+				E56FEFE41A962B5A00C628B3 /* Address */,
+				E56FEFD71A96297300C628B3 /* AddressCell.swift */,
+				E56FEFD81A96297300C628B3 /* AddressEditCell.swift */,
+				E56FEFD91A96297300C628B3 /* AddressEditViewController.swift */,
+				E56FEFDB1A96297300C628B3 /* AreaPicker.swift */,
+				E56FEFB31A96293100C628B3 /* AppDelegate.swift */,
+				E56FEFB81A96293100C628B3 /* ViewController.swift */,
+				E56FEFBA1A96293100C628B3 /* Main.storyboard */,
+				E56FEFBD1A96293100C628B3 /* Images.xcassets */,
+				E56FEFBF1A96293100C628B3 /* LaunchScreen.xib */,
+				E56FEFB51A96293100C628B3 /* GKAddressKitExample.xcdatamodeld */,
+				E56FEFF81A962B7A00C628B3 /* province.json */,
+				E56FEFB11A96293100C628B3 /* Supporting Files */,
+			);
+			path = GKAddressKitExample;
+			sourceTree = "<group>";
+		};
+		E56FEFB11A96293100C628B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E56FEFB21A96293100C628B3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E56FEFC91A96293100C628B3 /* GKAddressKitExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				E56FEFCC1A96293100C628B3 /* GKAddressKitExampleTests.swift */,
+				E56FEFCA1A96293100C628B3 /* Supporting Files */,
+			);
+			path = GKAddressKitExampleTests;
+			sourceTree = "<group>";
+		};
+		E56FEFCA1A96293100C628B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E56FEFCB1A96293100C628B3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E56FEFE41A962B5A00C628B3 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				E56FEFE51A962B5A00C628B3 /* AddressEntity.swift */,
+				E56FEFE61A962B5A00C628B3 /* AddressRepository.swift */,
+				E56FEFE71A962B5A00C628B3 /* CityEntity.swift */,
+				E56FEFE81A962B5A00C628B3 /* DistrictEntity.swift */,
+				E56FEFE91A962B5A00C628B3 /* FetchedResultsControllerDataSource.swift */,
+				E56FEFEA1A962B5A00C628B3 /* GKAddressModel.xcdatamodeld */,
+				E56FEFEC1A962B5A00C628B3 /* ManagedObject+Extensions.swift */,
+				E56FEFED1A962B5A00C628B3 /* PersistenStack.swift */,
+				E56FEFEE1A962B5A00C628B3 /* ProvinceEntity.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		E56FEFFA1A962D4400C628B3 /* GKAddressKit */ = {
+			isa = PBXGroup;
+			children = (
+				E56FEFFC1A962D7100C628B3 /* GKRegionBackend.h */,
+				E56FEFFD1A962D7100C628B3 /* GKRegionBackend.m */,
+				E56FF0051A963BD000C628B3 /* GKAddress.h */,
+				E56FF0061A963BD000C628B3 /* GKAddress.m */,
+				E56FF0141A963F9100C628B3 /* GKCity.h */,
+				E56FF0151A963F9100C628B3 /* GKCity.m */,
+				E56FF0161A963F9100C628B3 /* GKCounty.h */,
+				E56FF0171A963F9100C628B3 /* GKCounty.m */,
+				E56FF0181A963F9100C628B3 /* GKProvince.h */,
+				E56FF0191A963F9100C628B3 /* GKProvince.m */,
+				E56FF01A1A963F9100C628B3 /* GKTown.h */,
+				E56FF01B1A963F9100C628B3 /* GKTown.m */,
+				E56FF01C1A963F9100C628B3 /* GKVillage.h */,
+				E56FF01D1A963F9100C628B3 /* GKVillage.m */,
+				E56FF01E1A963F9100C628B3 /* GKRegionPickerView.h */,
+				E56FF01F1A963F9100C628B3 /* GKRegionPickerView.m */,
+				E56FF0261A96402500C628B3 /* GKAddressService.h */,
+			);
+			path = GKAddressKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E56FEFAD1A96293100C628B3 /* GKAddressKitExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E56FEFD01A96293100C628B3 /* Build configuration list for PBXNativeTarget "GKAddressKitExample" */;
+			buildPhases = (
+				3D56F4A7244119164A3C8998 /* Check Pods Manifest.lock */,
+				E56FEFAA1A96293100C628B3 /* Sources */,
+				E56FEFAB1A96293100C628B3 /* Frameworks */,
+				E56FEFAC1A96293100C628B3 /* Resources */,
+				1786703DF877FACAB81F3BAB /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GKAddressKitExample;
+			productName = GKAddressKitExample;
+			productReference = E56FEFAE1A96293100C628B3 /* GKAddressKitExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E56FEFC51A96293100C628B3 /* GKAddressKitExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E56FEFD31A96293100C628B3 /* Build configuration list for PBXNativeTarget "GKAddressKitExampleTests" */;
+			buildPhases = (
+				E56FEFC21A96293100C628B3 /* Sources */,
+				E56FEFC31A96293100C628B3 /* Frameworks */,
+				E56FEFC41A96293100C628B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E56FEFC81A96293100C628B3 /* PBXTargetDependency */,
+			);
+			name = GKAddressKitExampleTests;
+			productName = GKAddressKitExampleTests;
+			productReference = E56FEFC61A96293100C628B3 /* GKAddressKitExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E56FEFA61A96293000C628B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Goku;
+				TargetAttributes = {
+					E56FEFAD1A96293100C628B3 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					E56FEFC51A96293100C628B3 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = E56FEFAD1A96293100C628B3;
+					};
+				};
+			};
+			buildConfigurationList = E56FEFA91A96293000C628B3 /* Build configuration list for PBXProject "GKAddressKitExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E56FEFA51A96293000C628B3;
+			productRefGroup = E56FEFAF1A96293100C628B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E56FEFAD1A96293100C628B3 /* GKAddressKitExample */,
+				E56FEFC51A96293100C628B3 /* GKAddressKitExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E56FEFAC1A96293100C628B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E56FEFBC1A96293100C628B3 /* Main.storyboard in Resources */,
+				E56FEFC11A96293100C628B3 /* LaunchScreen.xib in Resources */,
+				E56FEFBE1A96293100C628B3 /* Images.xcassets in Resources */,
+				E56FEFF91A962B7A00C628B3 /* province.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E56FEFC41A96293100C628B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1786703DF877FACAB81F3BAB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GKAddressKitExample/Pods-GKAddressKitExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D56F4A7244119164A3C8998 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E56FEFAA1A96293100C628B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E56FEFB91A96293100C628B3 /* ViewController.swift in Sources */,
+				E56FEFF11A962B5A00C628B3 /* CityEntity.swift in Sources */,
+				E56FEFF71A962B5A00C628B3 /* ProvinceEntity.swift in Sources */,
+				E56FF0071A963BD000C628B3 /* GKAddress.m in Sources */,
+				E56FEFF61A962B5A00C628B3 /* PersistenStack.swift in Sources */,
+				E56FEFEF1A962B5A00C628B3 /* AddressEntity.swift in Sources */,
+				E56FEFF01A962B5A00C628B3 /* AddressRepository.swift in Sources */,
+				E56FEFB71A96293100C628B3 /* GKAddressKitExample.xcdatamodeld in Sources */,
+				E56FEFE21A96297300C628B3 /* AreaPicker.swift in Sources */,
+				E56FF0211A963F9100C628B3 /* GKCounty.m in Sources */,
+				E56FF0241A963F9100C628B3 /* GKVillage.m in Sources */,
+				E56FEFF21A962B5A00C628B3 /* DistrictEntity.swift in Sources */,
+				E56FEFF41A962B5A00C628B3 /* GKAddressModel.xcdatamodeld in Sources */,
+				E56FF0221A963F9100C628B3 /* GKProvince.m in Sources */,
+				E56FF0231A963F9100C628B3 /* GKTown.m in Sources */,
+				E56FEFFE1A962D7100C628B3 /* GKRegionBackend.m in Sources */,
+				E56FF0251A963F9100C628B3 /* GKRegionPickerView.m in Sources */,
+				E56FF0201A963F9100C628B3 /* GKCity.m in Sources */,
+				E56FEFF31A962B5A00C628B3 /* FetchedResultsControllerDataSource.swift in Sources */,
+				E56FEFDE1A96297300C628B3 /* AddressCell.swift in Sources */,
+				E56FEFF51A962B5A00C628B3 /* ManagedObject+Extensions.swift in Sources */,
+				E56FEFE01A96297300C628B3 /* AddressEditViewController.swift in Sources */,
+				E56FEFB41A96293100C628B3 /* AppDelegate.swift in Sources */,
+				E56FEFDF1A96297300C628B3 /* AddressEditCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E56FEFC21A96293100C628B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E56FEFCD1A96293100C628B3 /* GKAddressKitExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E56FEFC81A96293100C628B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E56FEFAD1A96293100C628B3 /* GKAddressKitExample */;
+			targetProxy = E56FEFC71A96293100C628B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E56FEFBA1A96293100C628B3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E56FEFBB1A96293100C628B3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E56FEFBF1A96293100C628B3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E56FEFC01A96293100C628B3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E56FEFCE1A96293100C628B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E56FEFCF1A96293100C628B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E56FEFD11A96293100C628B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A59B54D707C6B281AF6AC9ED /* Pods-GKAddressKitExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = GKAddressKitExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GKAddressKitExample/GKAddressKitExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E56FEFD21A96293100C628B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78418E27FE5D146F33ABEEBD /* Pods-GKAddressKitExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = GKAddressKitExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GKAddressKitExample/GKAddressKitExample-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		E56FEFD41A96293100C628B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GKAddressKitExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GKAddressKitExample.app/GKAddressKitExample";
+			};
+			name = Debug;
+		};
+		E56FEFD51A96293100C628B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GKAddressKitExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GKAddressKitExample.app/GKAddressKitExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E56FEFA91A96293000C628B3 /* Build configuration list for PBXProject "GKAddressKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E56FEFCE1A96293100C628B3 /* Debug */,
+				E56FEFCF1A96293100C628B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E56FEFD01A96293100C628B3 /* Build configuration list for PBXNativeTarget "GKAddressKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E56FEFD11A96293100C628B3 /* Debug */,
+				E56FEFD21A96293100C628B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E56FEFD31A96293100C628B3 /* Build configuration list for PBXNativeTarget "GKAddressKitExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E56FEFD41A96293100C628B3 /* Debug */,
+				E56FEFD51A96293100C628B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E56FEFB51A96293100C628B3 /* GKAddressKitExample.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E56FEFB61A96293100C628B3 /* GKAddressKitExample.xcdatamodel */,
+			);
+			currentVersion = E56FEFB61A96293100C628B3 /* GKAddressKitExample.xcdatamodel */;
+			path = GKAddressKitExample.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		E56FEFEA1A962B5A00C628B3 /* GKAddressModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E56FEFEB1A962B5A00C628B3 /* GKAddressModel.xcdatamodel */,
+			);
+			currentVersion = E56FEFEB1A962B5A00C628B3 /* GKAddressModel.xcdatamodel */;
+			path = GKAddressModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E56FEFA61A96293000C628B3 /* Project object */;
+}
