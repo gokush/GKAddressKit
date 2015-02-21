@@ -11,6 +11,6 @@ target 'GKAddressKitExample' do
 end
 
 target 'GKAddressKitExampleTests' do
-
+  pod 'GKUserKit', :git => 'https://github.com/gokush/GKUserKit'
 end
 

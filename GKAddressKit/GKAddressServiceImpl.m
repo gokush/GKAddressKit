@@ -7,6 +7,9 @@
 //
 
 #import "GKAddressServiceImpl.h"
+#import "GKAddressCommon.h"
+
+#import "GKAddressKitExample-Swift.h"
 
 @implementation GKAddressServiceImpl
 
@@ -77,6 +80,12 @@
 {
   return
   [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    
+    [[self.repository findAddressesWithUser:user]
+     subscribeNext:^(NSArray *addresses) {
+      [subscriber sendNext:addresses];
+    }];
+     
     [[self.backend fetchAddresses] subscribeNext:^(id x) {
       [subscriber sendNext:x];
       [subscriber sendCompleted];

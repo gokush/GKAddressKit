@@ -9,8 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "GKUser.h"
+#import "GKAddressBackend.h"
+#import "GKAddressRepository.h"
 
 @protocol GKAddressService <NSObject>
+
+@property (strong, nonatomic) id<GKAddressBackend> backend;
+@property (strong, nonatomic) id<GKAddressRepository> repository;
 
 - (RACSignal *)provinces;
 - (RACSignal *)citiesWithProvinceID:(NSInteger)provinceID;
