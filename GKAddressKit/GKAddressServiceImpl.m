@@ -73,4 +73,21 @@
   }];
 }
 
+- (RACSignal *)addressesWithUser:(GKUser *)user
+{
+  return
+  [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    [[self.backend fetchAddresses] subscribeNext:^(id x) {
+      [subscriber sendNext:x];
+      [subscriber sendCompleted];
+    } error:^(NSError *error) {
+      [subscriber sendError:error];
+      [subscriber sendCompleted];
+    }];
+    
+    return [RACDisposable disposableWithBlock:^{
+    }];
+  }];
+}
+
 @end

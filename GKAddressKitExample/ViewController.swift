@@ -20,7 +20,8 @@ class ViewController: UIViewController, FetchedResultsControllerDataSourceDelega
         super.viewDidLoad()
       
       let controller:GKAddressListController =
-        GKAddressListController.addressListControllerWithMock()
+        GKAddressListController()
+      controller.service = GKAddressContainerMock().addressService()
       self.navigationController?.pushViewController(controller, animated: true)
       
 //        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: UIBarButtonItemStyle.Plain, target: self, action: "addAddressButtonClick:")

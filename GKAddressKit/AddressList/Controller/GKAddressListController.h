@@ -15,7 +15,8 @@
 @property (strong, nonatomic) GKUser *user;
 @property (strong, nonatomic) NSArray *addresses;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) id<GKAddressService> service;
 - (id)initWithAddress:(NSArray *)addresses;
 - (id)initWithUser:(GKUser *)user;
-+ (instancetype)addressListControllerWithMock;
+
 @end

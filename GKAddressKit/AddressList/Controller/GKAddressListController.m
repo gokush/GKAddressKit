@@ -53,6 +53,11 @@
     for (NSString *identifier in @[@"AddressListTableViewCell"])
         [self.tableView registerNib:[UINib nibWithNibName:identifier bundle:nil]
              forCellReuseIdentifier:identifier];
+  
+  RAC(self, addresses) = [self.service addressesWithUser:self.user];
+  [RACObserve(self, addresses) subscribeNext:^(NSArray *address) {
+    [self.tableView reloadData];
+  }];
 }
 
 - (void)didTapAddAddress:(id)sender
@@ -103,35 +108,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 //  controller = [[AddressEditController alloc] initWithAddress:address
 //                                                         user:self.user];
 //  [self.navigationController pushViewController:controller animated:YES];
-}
-
-+ (instancetype)addressListControllerWithMock
-{
-    GKAddress *address = [[GKAddress alloc] init];
-    address.name = @"小悟空";
-    address.cellPhone = @"15202171763";
-    address.postcode = @"900032";
-    address.address = @"上海市浦东新区张杨北路 距离市中心约15500米";
-    
-  GKProvince *province = [[GKProvince alloc] init];
-  province.name = @"上海市";
-  
-  GKCity *city = [[GKCity alloc] init];
-  city.name = @"上海市";
-  
-  GKCounty *county = [[GKCounty alloc] init];
-  county.name = @"虹口区";
-  
-  address.province = province;
-  address.city = city;
-  address.county = county;
-  address.isDefault = YES;
-    
-    GKAddressListController *controller;
-    controller = [[GKAddressListController alloc]
-                  initWithAddress:@[address]];
-    
-    return controller;
 }
 
 /*

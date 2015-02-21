@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "GKUser.h"
 
 @protocol GKAddressService <NSObject>
 
@@ -16,4 +17,5 @@
 - (RACSignal *)countiesWithCityID:(NSInteger)cityID;
 - (RACSignal *)townsWithCountyID:(NSInteger)countyID;
 - (RACSignal *)villagesWithTownID:(NSInteger)TownID;
+- (RACSignal *)addressesWithUser:(GKUser *)user;
 @end

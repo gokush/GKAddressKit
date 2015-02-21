@@ -1,17 +1,17 @@
 //
-//  GKAddressContainerImpl.m
+//  GKAddressContainerMock.m
 //  GKAddressKitExample
 //
 //  Created by 小悟空 on 2/21/15.
 //  Copyright (c) 2015 Goku. All rights reserved.
 //
 
-#import "GKAddressContainerImpl.h"
+#import "GKAddressContainerMock.h"
 #import "GKRegionBackendImpl.h"
 #import "GKAddressServiceImpl.h"
-#import "GKAddressBackendImpl.h"
+#import "GKAddressBackendMock.h"
 
-@implementation GKAddressContainerImpl
+@implementation GKAddressContainerMock
 
 - (id<GKRegionBackend>)regionBackend
 {
@@ -20,12 +20,15 @@
 
 - (id<GKAddressService>)addressService
 {
-  return [[GKAddressServiceImpl alloc]
+  GKAddressServiceImpl *service = [[GKAddressServiceImpl alloc]
           initWithRegionBackend:[self regionBackend]];
+  service.backend = [self addressBackend];
+  return service;
 }
 
 - (id<GKAddressBackend>)addressBackend
 {
-  return [[GKAddressBackendImpl alloc] init];
+  return [[GKAddressBackendMock alloc] init];
 }
+
 @end

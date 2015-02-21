@@ -4,6 +4,8 @@
 
 #import "GKAddressCommon.h"
 #import "GKRegionBackend.h"
+#import "GKAddressBackendMock.h"
 #import "GKAddressContainerImpl.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "GKAddressListController.h"
+#import "GKAddressContainerMock.h"

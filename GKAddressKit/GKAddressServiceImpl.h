@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "GKAddressService.h"
 #import "GKRegionBackend.h"
+#import "GKAddressBackend.h"
 
 @interface GKAddressServiceImpl : NSObject <GKAddressService>
 
 @property (strong, nonatomic) id<GKRegionBackend> regionBackend;
+@property (strong, nonatomic) id<GKAddressBackend> backend;
 
 - (id)initWithRegionBackend:(id<GKRegionBackend>)regionBackend;
 - (RACSignal *)provinces;
@@ -20,4 +22,5 @@
 - (RACSignal *)countiesWithCityID:(NSInteger)cityID;
 - (RACSignal *)townsWithCountyID:(NSInteger)countyID;
 - (RACSignal *)villagesWithTownID:(NSInteger)TownID;
+- (RACSignal *)addressesWithUser:(GKUser *)user;
 @end

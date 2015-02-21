@@ -1,5 +1,5 @@
 //
-//  GKAddressContainer.h
+//  GKAddressContainerMock.h
 //  GKAddressKitExample
 //
 //  Created by 小悟空 on 2/21/15.
@@ -7,11 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GKRegionBackend.h"
-#import "GKAddressBackend.h"
-#import "GKAddressService.h"
+#import "GKAddressContainer.h"
 
-@protocol GKAddressContainer <NSObject>
+@interface GKAddressContainerMock : NSObject
 
 - (id<GKRegionBackend>)regionBackend;
 - (id<GKAddressService>)addressService;
