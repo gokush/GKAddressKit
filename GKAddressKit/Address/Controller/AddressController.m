@@ -7,7 +7,7 @@
 //
 
 #import "AddressController.h"
-#import "AddressDefines.h"
+#import "GKAddressCommon.h"
 #import "AddressTableViewCell.h"
 
 @interface AddressController ()
@@ -26,7 +26,7 @@
     return self;
 }
 
-- (id)initWithAddress:(Address *)address user:(User *)anUser
+- (id)initWithAddress:(GKAddress *)address user:(GKUser *)anUser
 {
     self = [self init];
     if (self) {
@@ -142,7 +142,7 @@ heightForHeaderInSection:(NSInteger)section
         }
         case AddressRegionCell: {
             cell.titleLabel.text = @"所在地区";
-            cell.contentLabel.text = [self.address.district description];
+            cell.contentLabel.text = [self.address.province name];
             break;
         }
         case AddressStreetCell: {
@@ -159,26 +159,25 @@ heightForHeaderInSection:(NSInteger)section
 + (instancetype)addressControllerWithMock
 {
     AddressController *controller;
-    Address *address = [[Address alloc] init];
+    GKAddress *address = [[GKAddress alloc] init];
     address.name = @"小悟空";
     address.cellPhone = @"15202171763";
     address.postcode = @"900032";
     address.address = @"大连西路";
-    
-    Region *provice = [[Region alloc] init];
-    provice.name = @"上海市";
-    
-    Region *city = [[Region alloc] init];
-    city.name = @"上海市";
-    city.parent = provice;
-    
-    Region *district = [[Region alloc] init];
-    district.name = @"虹口区";
-    district.parent = city;
-
-    address.district = district;
-    address.city = city;
-    address.province = provice;
+  
+  
+  GKProvince *province = [[GKProvince alloc] init];
+  province.name = @"上海市";
+  
+  GKCity *city = [[GKCity alloc] init];
+  city.name = @"上海市";
+  
+  GKCounty *county = [[GKCounty alloc] init];
+  county.name = @"虹口区";
+  
+  address.province = province;
+  address.city = city;
+  address.county = county;
     
     controller = [[AddressController alloc] initWithAddress:address user:nil];
     

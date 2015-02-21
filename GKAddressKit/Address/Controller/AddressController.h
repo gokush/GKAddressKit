@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Address.h"
+#import "GKAddressCommon.h"
 
 @interface AddressController : UIViewController
 <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) Address *address;
-@property (strong, nonatomic) User *user;
+@property (strong, nonatomic) GKAddress *address;
+@property (strong, nonatomic) GKUser *user;
 
-- (id)initWithAddress:(Address *)address user:(User *)anUser;
+- (id)initWithAddress:(GKAddress *)address user:(GKUser *)anUser;
 + (instancetype)addressControllerWithMock;
 @end

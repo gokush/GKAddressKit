@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Address.h"
-#import "UIBindableTableViewCell.h"
+#import "GKAddressCommon.h"
 
 @interface AddressEditInputTableViewCell : UITableViewCell
-<UIBindableTableViewCell>
 
 @property (strong, nonatomic) IBOutlet UITextField *inputTextField;
-@property (strong, nonatomic) Address *address;
+@property (strong, nonatomic) GKAddress *address;
 @end

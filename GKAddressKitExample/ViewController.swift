@@ -12,19 +12,27 @@ class ViewController: UIViewController, FetchedResultsControllerDataSourceDelega
 
     @IBOutlet weak var tableView: UITableView!
     var fetchedResultControllerDataSource: FetchedResultsControllerDataSource?
-    
+  
+  var provinces:NSArray?;
+  let service:GKAddressService = GKAddressContainerImpl().addressService()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: UIBarButtonItemStyle.Plain, target: self, action: "addAddressButtonClick:")
-        self.tableView.tableFooterView = UIView()
-        
-        refreshDate()
-        setupFetchedResultsControllerDataSource()
-        
-        let provinces = AddressRepository.sharedInstance.fetchProvinces()
-        for item in provinces{
-            print("\(item.name)    ")
-            println(item.addresses.count)
+      
+      let controller:AddressListController =
+        AddressListController.addressListControllerWithMock()
+      self.navigationController?.pushViewController(controller, animated: true)
+      
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: UIBarButtonItemStyle.Plain, target: self, action: "addAddressButtonClick:")
+//        self.tableView.tableFooterView = UIView()
+//        
+//        refreshDate()
+//        setupFetchedResultsControllerDataSource()
+//        
+//        let provinces = AddressRepository.sharedInstance.fetchProvinces()
+//        for item in provinces{
+//            print("\(item.name)    ")
+//            println(item.addresses.count)
 //            let cities = item.cities.allObjects as [CityEntity]
 //            for item in cities{
 //                print("    ")
@@ -35,7 +43,7 @@ class ViewController: UIViewController, FetchedResultsControllerDataSourceDelega
 //                    println(item.name)
 //                }
 //            }
-        }
+//        }
 //        println("************************")
 //        let districts = AddressRepository.sharedInstance.fetchDistricts()
 //        if districts != nil{

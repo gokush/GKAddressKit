@@ -20,26 +20,26 @@
     // Configure the view for the selected state
 }
 
-- (void)bind
-{
-    [self.address addObserver:self forKeyPath:@"district"
-                        options:NSKeyValueObservingOptionInitial context:nil];
-}
-
-- (void)unbind
-{
-    [self.address removeObserver:self forKeyPath:@"district"];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
-                        change:(NSDictionary *)change context:(void *)context
-{
-    if (self.address.province && self.address.city &&
-        self.address.district)
-    self.inputTextField.text = [NSString stringWithFormat:@"%@%@%@",
-                                self.address.province.name,
-                                self.address.city.name,
-                                self.address.district.name];
-}
+//- (void)bind
+//{
+//    [self.address addObserver:self forKeyPath:@"district"
+//                        options:NSKeyValueObservingOptionInitial context:nil];
+//}
+//
+//- (void)unbind
+//{
+//    [self.address removeObserver:self forKeyPath:@"district"];
+//}
+//
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
+//                        change:(NSDictionary *)change context:(void *)context
+//{
+//    if (self.address.province && self.address.city &&
+//        self.address.district)
+//    self.inputTextField.text = [NSString stringWithFormat:@"%@%@%@",
+//                                self.address.province.name,
+//                                self.address.city.name,
+//                                self.address.district.name];
+//}
 
 @end

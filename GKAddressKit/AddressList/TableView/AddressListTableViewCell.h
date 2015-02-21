@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Address.h"
+#import "GKAddressCommon.h"
 #import "AddressListTableViewCellSelected.h"
 
 @interface AddressListTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) Address *address;
+@property (strong, nonatomic) GKAddress *address;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *cellPhoneLabel;
 @property (strong, nonatomic) IBOutlet UILabel *addressLabel;

@@ -7,12 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GKRegion.h"
 
-@interface GKProvince : NSObject
+@interface GKProvince : GKRegion
 
 @property (assign, nonatomic) NSInteger provinceID;
-@property (strong, nonatomic) NSString  *code;
-@property (strong, nonatomic) NSString  *name;
-@property (strong, nonatomic) NSString  *pinyin;
 @property (strong, nonatomic) NSArray   *cities;
 @end

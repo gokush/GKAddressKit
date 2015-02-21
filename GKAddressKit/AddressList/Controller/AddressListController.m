@@ -8,7 +8,6 @@
 
 #import "AddressListController.h"
 #import "AddressListTableViewCell.h"
-#import "AddressEditController.h"
 
 @interface AddressListController ()
 
@@ -25,7 +24,7 @@
     return self;
 }
 
-- (id)initWithUser:(User *)user
+- (id)initWithUser:(GKUser *)user
 {
     self = [self init];
     if (self) {
@@ -58,10 +57,10 @@
 
 - (void)didTapAddAddress:(id)sender
 {
-  AddressEditController *controller;
-  controller = [[AddressEditController alloc] initWithAddress:nil
-                                                         user:self.user];
-  [self.navigationController pushViewController:controller animated:YES];
+//  AddressEditController *controller;
+//  controller = [[AddressEditController alloc] initWithAddress:nil
+//                                                         user:self.user];
+//  [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,7 +85,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     AddressListTableViewCell *cell;
-    Address *address;
+    GKAddress *address;
     cell = [tableView
             dequeueReusableCellWithIdentifier:@"AddressListTableViewCell"];
     address = [self.addresses objectAtIndex:indexPath.row];
@@ -98,37 +97,35 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  Address *address;
-  AddressEditController *controller;
-  address = self.addresses[indexPath.row];
-  controller = [[AddressEditController alloc] initWithAddress:address
-                                                         user:self.user];
-  [self.navigationController pushViewController:controller animated:YES];
+//  Address *address;
+//  AddressEditController *controller;
+//  address = self.addresses[indexPath.row];
+//  controller = [[AddressEditController alloc] initWithAddress:address
+//                                                         user:self.user];
+//  [self.navigationController pushViewController:controller animated:YES];
 }
 
 + (instancetype)addressListControllerWithMock
 {
-    Address *address = [[Address alloc] init];
+    GKAddress *address = [[GKAddress alloc] init];
     address.name = @"小悟空";
     address.cellPhone = @"15202171763";
     address.postcode = @"900032";
     address.address = @"上海市浦东新区张杨北路 距离市中心约15500米";
     
-    Region *provice = [[Region alloc] init];
-    provice.name = @"上海市";
-    
-    Region *city = [[Region alloc] init];
-    city.name = @"上海市";
-    city.parent = provice;
-    
-    Region *district = [[Region alloc] init];
-    district.name = @"虹口区";
-    district.parent = city;
-    
-    address.district = district;
-    address.city = city;
-    address.province = provice;
-    address.isDefault = YES;
+  GKProvince *province = [[GKProvince alloc] init];
+  province.name = @"上海市";
+  
+  GKCity *city = [[GKCity alloc] init];
+  city.name = @"上海市";
+  
+  GKCounty *county = [[GKCounty alloc] init];
+  county.name = @"虹口区";
+  
+  address.province = province;
+  address.city = city;
+  address.county = county;
+  address.isDefault = YES;
     
     AddressListController *controller;
     controller = [[AddressListController alloc]

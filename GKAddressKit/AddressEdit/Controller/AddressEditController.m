@@ -7,9 +7,8 @@
 //
 
 #import "AddressEditController.h"
-#import "AddressDefines.h"
+#import "GKAddressCommon.h"
 #import "AddressEditInputTableViewCell.h"
-#import "UIBindableTableViewCell.h"
 #import "MBProgressHUD.h"
 
 
@@ -32,7 +31,7 @@
     return self;
 }
 
-- (id)initWithAddress:(Address *)address user:(User *)anUser
+- (id)initWithAddress:(GKAddress *)address user:(GKUser *)anUser
 {
     self = [self init];
     

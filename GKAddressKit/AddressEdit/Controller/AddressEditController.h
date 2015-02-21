@@ -7,19 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AddressService.h"
-#import "RegionPickerViewController.h"
+#import "GKAddressCommon.h"
+#import "GKRegionPickerView.h"
 
 @interface AddressEditController : UIViewController
-<UITableViewDataSource, UITableViewDelegate, AddressServiceDelegate,
+<UITableViewDataSource, UITableViewDelegate,
 RegionPickerViewControllerDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) id<AddressService> service;
+@property (strong, nonatomic) id<GKAddressService> service;
 @property (strong, nonatomic) NSArray *regions;
-@property (strong, nonatomic) RegionPickerViewController *regionPicker;
-@property (strong, nonatomic) Address *address;
-@property (strong, nonatomic) User *user;
+@property (strong, nonatomic) GKRegionPickerView *regionPicker;
+@property (strong, nonatomic) GKAddress *address;
+@property (strong, nonatomic) GKUser *user;
 
-- (id)initWithAddress:(Address *)address user:(User *)anUser;
+- (id)initWithAddress:(GKAddress *)address user:(GKUser *)anUser;
 @end

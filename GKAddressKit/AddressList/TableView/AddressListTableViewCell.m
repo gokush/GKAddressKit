@@ -10,7 +10,7 @@
 
 @implementation AddressListTableViewCell
 
-- (void)setAddress:(Address *)address
+- (void)setAddress:(GKAddress *)address
 {
     if (_address != address) {
         _address = address;
