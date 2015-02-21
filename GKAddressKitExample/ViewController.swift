@@ -19,8 +19,8 @@ class ViewController: UIViewController, FetchedResultsControllerDataSourceDelega
     override func viewDidLoad() {
         super.viewDidLoad()
       
-      let controller:AddressListController =
-        AddressListController.addressListControllerWithMock()
+      let controller:GKAddressListController =
+        GKAddressListController.addressListControllerWithMock()
       self.navigationController?.pushViewController(controller, animated: true)
       
 //        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: UIBarButtonItemStyle.Plain, target: self, action: "addAddressButtonClick:")

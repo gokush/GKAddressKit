@@ -6,4 +6,4 @@
 #import "GKRegionBackend.h"
 #import "GKAddressContainerImpl.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import "AddressListController.h"
+#import "GKAddressListController.h"
