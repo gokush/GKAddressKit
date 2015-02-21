@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 GKCommerce. All rights reserved.
 //
 
-#import "AddressListController.h"
+#import "GKAddressListController.h"
 #import "AddressListTableViewCell.h"
 
-@interface AddressListController ()
+@interface GKAddressListController ()
 
 @end
 
-@implementation AddressListController
+@implementation GKAddressListController
 
 - (id)init
 {
@@ -127,8 +127,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
   address.county = county;
   address.isDefault = YES;
     
-    AddressListController *controller;
-    controller = [[AddressListController alloc]
+    GKAddressListController *controller;
+    controller = [[GKAddressListController alloc]
                   initWithAddress:@[address]];
     
     return controller;

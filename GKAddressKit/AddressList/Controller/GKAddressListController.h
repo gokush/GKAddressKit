@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GKAddressCommon.h"
 
-@interface AddressListController : UIViewController
+@interface GKAddressListController : UIViewController
 <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) GKUser *user;

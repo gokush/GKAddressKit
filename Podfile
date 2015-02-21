@@ -7,7 +7,7 @@ target 'GKAddressKitExample' do
     pod 'AFNetworking', "~> 2.5.0"
     pod 'CocoaLumberjack', '~> 2.0.0-beta4'
     pod 'ReactiveCocoa'
-    pod 'GKUserKit', :path => '~/workspace/GKUserKit'
+    pod 'GKUserKit', :git => 'https://github.com/gokush/GKUserKit'
 end
 
 target 'GKAddressKitExampleTests' do

@@ -38,7 +38,7 @@
 		E56FF0251A963F9100C628B3 /* GKRegionPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF01F1A963F9100C628B3 /* GKRegionPickerView.m */; };
 		E5A126AA1A98654D0016AF23 /* GKAddressServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126A91A98654D0016AF23 /* GKAddressServiceImpl.m */; };
 		E5A126AE1A9868CA0016AF23 /* GKAddressContainerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126AD1A9868CA0016AF23 /* GKAddressContainerImpl.m */; };
-		E5A126DB1A98ADA00016AF23 /* AddressListController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126C91A98ADA00016AF23 /* AddressListController.m */; };
+		E5A126DB1A98ADA00016AF23 /* GKAddressListController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126C91A98ADA00016AF23 /* GKAddressListController.m */; };
 		E5A126DC1A98ADA00016AF23 /* AddressListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126CC1A98ADA00016AF23 /* AddressListTableViewCell.m */; };
 		E5A126DD1A98ADA00016AF23 /* AddressListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5A126CD1A98ADA00016AF23 /* AddressListTableViewCell.xib */; };
 		E5A126DE1A98ADA00016AF23 /* AddressListTableViewCellSelected.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126CF1A98ADA00016AF23 /* AddressListTableViewCellSelected.m */; };
@@ -110,8 +110,8 @@
 		E5A126AB1A98682C0016AF23 /* GKAddressContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddressContainer.h; sourceTree = "<group>"; };
 		E5A126AC1A9868CA0016AF23 /* GKAddressContainerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddressContainerImpl.h; sourceTree = "<group>"; };
 		E5A126AD1A9868CA0016AF23 /* GKAddressContainerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAddressContainerImpl.m; sourceTree = "<group>"; };
-		E5A126C81A98ADA00016AF23 /* AddressListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressListController.h; sourceTree = "<group>"; };
-		E5A126C91A98ADA00016AF23 /* AddressListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressListController.m; sourceTree = "<group>"; };
+		E5A126C81A98ADA00016AF23 /* GKAddressListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddressListController.h; sourceTree = "<group>"; };
+		E5A126C91A98ADA00016AF23 /* GKAddressListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAddressListController.m; sourceTree = "<group>"; };
 		E5A126CB1A98ADA00016AF23 /* AddressListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressListTableViewCell.h; sourceTree = "<group>"; };
 		E5A126CC1A98ADA00016AF23 /* AddressListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressListTableViewCell.m; sourceTree = "<group>"; };
 		E5A126CD1A98ADA00016AF23 /* AddressListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressListTableViewCell.xib; sourceTree = "<group>"; };
@@ -291,8 +291,8 @@
 		E5A126C71A98ADA00016AF23 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E5A126C81A98ADA00016AF23 /* AddressListController.h */,
-				E5A126C91A98ADA00016AF23 /* AddressListController.m */,
+				E5A126C81A98ADA00016AF23 /* GKAddressListController.h */,
+				E5A126C91A98ADA00016AF23 /* GKAddressListController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -478,7 +478,7 @@
 				E56FF0201A963F9100C628B3 /* GKCity.m in Sources */,
 				E56FEFF31A962B5A00C628B3 /* FetchedResultsControllerDataSource.swift in Sources */,
 				E5A126AE1A9868CA0016AF23 /* GKAddressContainerImpl.m in Sources */,
-				E5A126DB1A98ADA00016AF23 /* AddressListController.m in Sources */,
+				E5A126DB1A98ADA00016AF23 /* GKAddressListController.m in Sources */,
 				E56FEFDE1A96297300C628B3 /* AddressCell.swift in Sources */,
 				E5A126EB1A98B9DD0016AF23 /* GKRegion.m in Sources */,
 				E56FEFF51A962B5A00C628B3 /* ManagedObject+Extensions.swift in Sources */,
