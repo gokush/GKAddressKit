@@ -28,7 +28,7 @@
 		E56FEFF61A962B5A00C628B3 /* PersistenStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFED1A962B5A00C628B3 /* PersistenStack.swift */; };
 		E56FEFF71A962B5A00C628B3 /* ProvinceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFEE1A962B5A00C628B3 /* ProvinceEntity.swift */; };
 		E56FEFF91A962B7A00C628B3 /* province.json in Resources */ = {isa = PBXBuildFile; fileRef = E56FEFF81A962B7A00C628B3 /* province.json */; };
-		E56FEFFE1A962D7100C628B3 /* GKRegionBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFFD1A962D7100C628B3 /* GKRegionBackend.m */; };
+		E56FEFFE1A962D7100C628B3 /* GKRegionBackendImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFFD1A962D7100C628B3 /* GKRegionBackendImpl.m */; };
 		E56FF0071A963BD000C628B3 /* GKAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF0061A963BD000C628B3 /* GKAddress.m */; };
 		E56FF0201A963F9100C628B3 /* GKCity.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF0151A963F9100C628B3 /* GKCity.m */; };
 		E56FF0211A963F9100C628B3 /* GKCounty.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF0171A963F9100C628B3 /* GKCounty.m */; };
@@ -36,6 +36,8 @@
 		E56FF0231A963F9100C628B3 /* GKTown.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF01B1A963F9100C628B3 /* GKTown.m */; };
 		E56FF0241A963F9100C628B3 /* GKVillage.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF01D1A963F9100C628B3 /* GKVillage.m */; };
 		E56FF0251A963F9100C628B3 /* GKRegionPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF01F1A963F9100C628B3 /* GKRegionPickerView.m */; };
+		E5A126AA1A98654D0016AF23 /* GKAddressServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126A91A98654D0016AF23 /* GKAddressServiceImpl.m */; };
+		E5A126AE1A9868CA0016AF23 /* GKAddressContainerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126AD1A9868CA0016AF23 /* GKAddressContainerImpl.m */; };
 		E8EA7BD7D2B2C682DEDE9556 /* libPods-GKAddressKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CE75E3FBD8F1093B1513C8 /* libPods-GKAddressKitExample.a */; };
 /* End PBXBuildFile section */
 
@@ -78,8 +80,8 @@
 		E56FEFED1A962B5A00C628B3 /* PersistenStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenStack.swift; sourceTree = "<group>"; };
 		E56FEFEE1A962B5A00C628B3 /* ProvinceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceEntity.swift; sourceTree = "<group>"; };
 		E56FEFF81A962B7A00C628B3 /* province.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province.json; sourceTree = "<group>"; };
-		E56FEFFC1A962D7100C628B3 /* GKRegionBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegionBackend.h; sourceTree = "<group>"; };
-		E56FEFFD1A962D7100C628B3 /* GKRegionBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegionBackend.m; sourceTree = "<group>"; };
+		E56FEFFC1A962D7100C628B3 /* GKRegionBackendImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegionBackendImpl.h; sourceTree = "<group>"; };
+		E56FEFFD1A962D7100C628B3 /* GKRegionBackendImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegionBackendImpl.m; sourceTree = "<group>"; };
 		E56FEFFF1A962D9A00C628B3 /* GKAddressKitExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GKAddressKitExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		E56FF0051A963BD000C628B3 /* GKAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddress.h; sourceTree = "<group>"; };
 		E56FF0061A963BD000C628B3 /* GKAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAddress.m; sourceTree = "<group>"; };
@@ -96,6 +98,12 @@
 		E56FF01E1A963F9100C628B3 /* GKRegionPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegionPickerView.h; sourceTree = "<group>"; };
 		E56FF01F1A963F9100C628B3 /* GKRegionPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegionPickerView.m; sourceTree = "<group>"; };
 		E56FF0261A96402500C628B3 /* GKAddressService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddressService.h; sourceTree = "<group>"; };
+		E5A126A71A98649F0016AF23 /* GKRegionBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegionBackend.h; sourceTree = "<group>"; };
+		E5A126A81A98654D0016AF23 /* GKAddressServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddressServiceImpl.h; sourceTree = "<group>"; };
+		E5A126A91A98654D0016AF23 /* GKAddressServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAddressServiceImpl.m; sourceTree = "<group>"; };
+		E5A126AB1A98682C0016AF23 /* GKAddressContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddressContainer.h; sourceTree = "<group>"; };
+		E5A126AC1A9868CA0016AF23 /* GKAddressContainerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddressContainerImpl.h; sourceTree = "<group>"; };
+		E5A126AD1A9868CA0016AF23 /* GKAddressContainerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAddressContainerImpl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,8 +228,9 @@
 		E56FEFFA1A962D4400C628B3 /* GKAddressKit */ = {
 			isa = PBXGroup;
 			children = (
-				E56FEFFC1A962D7100C628B3 /* GKRegionBackend.h */,
-				E56FEFFD1A962D7100C628B3 /* GKRegionBackend.m */,
+				E5A126A71A98649F0016AF23 /* GKRegionBackend.h */,
+				E56FEFFC1A962D7100C628B3 /* GKRegionBackendImpl.h */,
+				E56FEFFD1A962D7100C628B3 /* GKRegionBackendImpl.m */,
 				E56FF0051A963BD000C628B3 /* GKAddress.h */,
 				E56FF0061A963BD000C628B3 /* GKAddress.m */,
 				E56FF0141A963F9100C628B3 /* GKCity.h */,
@@ -237,6 +246,11 @@
 				E56FF01E1A963F9100C628B3 /* GKRegionPickerView.h */,
 				E56FF01F1A963F9100C628B3 /* GKRegionPickerView.m */,
 				E56FF0261A96402500C628B3 /* GKAddressService.h */,
+				E5A126A81A98654D0016AF23 /* GKAddressServiceImpl.h */,
+				E5A126A91A98654D0016AF23 /* GKAddressServiceImpl.m */,
+				E5A126AB1A98682C0016AF23 /* GKAddressContainer.h */,
+				E5A126AC1A9868CA0016AF23 /* GKAddressContainerImpl.h */,
+				E5A126AD1A9868CA0016AF23 /* GKAddressContainerImpl.m */,
 			);
 			path = GKAddressKit;
 			sourceTree = "<group>";
@@ -392,10 +406,12 @@
 				E56FEFF41A962B5A00C628B3 /* GKAddressModel.xcdatamodeld in Sources */,
 				E56FF0221A963F9100C628B3 /* GKProvince.m in Sources */,
 				E56FF0231A963F9100C628B3 /* GKTown.m in Sources */,
-				E56FEFFE1A962D7100C628B3 /* GKRegionBackend.m in Sources */,
+				E56FEFFE1A962D7100C628B3 /* GKRegionBackendImpl.m in Sources */,
+				E5A126AA1A98654D0016AF23 /* GKAddressServiceImpl.m in Sources */,
 				E56FF0251A963F9100C628B3 /* GKRegionPickerView.m in Sources */,
 				E56FF0201A963F9100C628B3 /* GKCity.m in Sources */,
 				E56FEFF31A962B5A00C628B3 /* FetchedResultsControllerDataSource.swift in Sources */,
+				E5A126AE1A9868CA0016AF23 /* GKAddressContainerImpl.m in Sources */,
 				E56FEFDE1A96297300C628B3 /* AddressCell.swift in Sources */,
 				E56FEFF51A962B5A00C628B3 /* ManagedObject+Extensions.swift in Sources */,
 				E56FEFE01A96297300C628B3 /* AddressEditViewController.swift in Sources */,

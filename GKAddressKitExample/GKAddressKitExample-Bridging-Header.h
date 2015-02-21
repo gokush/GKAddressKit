@@ -3,3 +3,5 @@
 //
 
 #import "GKRegionBackend.h"
+#import "GKAddressContainerImpl.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>

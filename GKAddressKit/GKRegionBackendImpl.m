@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 Goku. All rights reserved.
 //
 
-#import "GKRegionBackend.h"
+#import "GKRegionBackendImpl.h"
 #import "GKAddress.h"
 
-@implementation GKRegionBackend
+@implementation GKRegionBackendImpl
 
 - (id)init
 {
