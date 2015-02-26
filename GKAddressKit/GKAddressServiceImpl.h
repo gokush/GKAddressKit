@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) id<GKRegionBackend> regionBackend;
 @property (strong, nonatomic) id<GKAddressBackend> backend;
+@property (strong, nonatomic) id<GKAddressRepository> repository;
 
 - (id)initWithRegionBackend:(id<GKRegionBackend>)regionBackend;
 - (RACSignal *)provinces;
