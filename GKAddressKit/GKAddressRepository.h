@@ -32,6 +32,7 @@ typedef NS_ENUM(NSInteger, GKAddressQueue) {
 - (RACSignal *)findFailureAddressesWithUser:(GKUser *)user;
 - (RACSignal *)create:(GKAddress *)address;
 - (RACSignal *)update:(GKAddress *)address;
+- (RACSignal *)updatePrimary:(GKAddress *)address;
 - (RACSignal *)remove:(GKAddress *)address;
 - (RACSignal *)setDefault:(GKAddress *)address;
 @end

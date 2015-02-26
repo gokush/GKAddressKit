@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		159E73F3122FA37966AC2DF8 /* libPods-GKAddressKitExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C824CD0325FDBC328DC31F9 /* libPods-GKAddressKitExampleTests.a */; };
+		E510DDC91A9F6BD800B9EB19 /* GKAddressSynchronization.m in Sources */ = {isa = PBXBuildFile; fileRef = E510DDC81A9F6BD800B9EB19 /* GKAddressSynchronization.m */; };
 		E555C3BE1A9B5E1600836965 /* GKAddressRepositoryMock.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C3BD1A9B5E1600836965 /* GKAddressRepositoryMock.m */; };
 		E56FEFB41A96293100C628B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFB31A96293100C628B3 /* AppDelegate.swift */; };
 		E56FEFB71A96293100C628B3 /* GKAddressKitExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFB51A96293100C628B3 /* GKAddressKitExample.xcdatamodeld */; };
@@ -71,6 +72,8 @@
 		78418E27FE5D146F33ABEEBD /* Pods-GKAddressKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKAddressKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-GKAddressKitExample/Pods-GKAddressKitExample.release.xcconfig"; sourceTree = "<group>"; };
 		A59B54D707C6B281AF6AC9ED /* Pods-GKAddressKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKAddressKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKAddressKitExample/Pods-GKAddressKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		C1CE75E3FBD8F1093B1513C8 /* libPods-GKAddressKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKAddressKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E510DDC71A9F6BD800B9EB19 /* GKAddressSynchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddressSynchronization.h; sourceTree = "<group>"; };
+		E510DDC81A9F6BD800B9EB19 /* GKAddressSynchronization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAddressSynchronization.m; sourceTree = "<group>"; };
 		E555C3BC1A9B5E1600836965 /* GKAddressRepositoryMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddressRepositoryMock.h; sourceTree = "<group>"; };
 		E555C3BD1A9B5E1600836965 /* GKAddressRepositoryMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAddressRepositoryMock.m; sourceTree = "<group>"; };
 		E56FEFAE1A96293100C628B3 /* GKAddressKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GKAddressKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,6 +317,8 @@
 				E5A126FD1A98D2180016AF23 /* GKAddressRepository.h */,
 				E555C3BC1A9B5E1600836965 /* GKAddressRepositoryMock.h */,
 				E555C3BD1A9B5E1600836965 /* GKAddressRepositoryMock.m */,
+				E510DDC71A9F6BD800B9EB19 /* GKAddressSynchronization.h */,
+				E510DDC81A9F6BD800B9EB19 /* GKAddressSynchronization.m */,
 			);
 			path = GKAddressKit;
 			sourceTree = "<group>";
@@ -558,6 +563,7 @@
 				E5A126F21A98C5B70016AF23 /* GKAddressBackendMock.m in Sources */,
 				E56FEFF51A962B5A00C628B3 /* ManagedObject+Extensions.swift in Sources */,
 				E56FEFE01A96297300C628B3 /* AddressEditViewController.swift in Sources */,
+				E510DDC91A9F6BD800B9EB19 /* GKAddressSynchronization.m in Sources */,
 				E56FEFB41A96293100C628B3 /* AppDelegate.swift in Sources */,
 				E56FEFDF1A96297300C628B3 /* AddressEditCell.swift in Sources */,
 				E5A126F51A98C6DD0016AF23 /* GKAddressContainerMock.m in Sources */,
