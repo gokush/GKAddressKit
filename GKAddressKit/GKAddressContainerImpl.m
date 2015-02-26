@@ -28,4 +28,9 @@
 {
   return [[GKAddressBackendImpl alloc] init];
 }
+
+- (id<GKAddressRepository>)addressRepository
+{
+  return nil;
+}
 @end

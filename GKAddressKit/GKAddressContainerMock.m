@@ -10,6 +10,7 @@
 #import "GKRegionBackendImpl.h"
 #import "GKAddressServiceImpl.h"
 #import "GKAddressBackendMock.h"
+#import "GKAddressRepositoryMock.h"
 
 @implementation GKAddressContainerMock
 
@@ -23,6 +24,7 @@
   GKAddressServiceImpl *service = [[GKAddressServiceImpl alloc]
           initWithRegionBackend:[self regionBackend]];
   service.backend = [self addressBackend];
+  service.repository = [self addressRepository];
   return service;
 }
 
@@ -31,4 +33,8 @@
   return [[GKAddressBackendMock alloc] init];
 }
 
+- (id<GKAddressRepository>)addressRepository
+{
+  return [[GKAddressRepositoryMock alloc] init];
+}
 @end

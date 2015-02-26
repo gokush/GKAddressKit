@@ -26,4 +26,7 @@
 @property (strong, nonatomic) GKTown *town;
 @property (strong, nonatomic) GKVillage *village;
 @property (assign, nonatomic) BOOL isDefault;
+
+- (GKAddress *)update:(GKAddress *)newObject;
+- (GKAddress *)clone;
 @end

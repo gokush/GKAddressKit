@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "GKAddress.h"
 
 @protocol GKAddressBackend <NSObject>
 
 - (RACSignal *)fetchAddresses;
+- (RACSignal *)create:(GKAddress *)address;
 @end

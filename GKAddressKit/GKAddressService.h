@@ -23,4 +23,5 @@
 - (RACSignal *)townsWithCountyID:(NSInteger)countyID;
 - (RACSignal *)villagesWithTownID:(NSInteger)TownID;
 - (RACSignal *)addressesWithUser:(GKUser *)user;
+- (RACSignal *)create:(GKAddress *)address;
 @end
