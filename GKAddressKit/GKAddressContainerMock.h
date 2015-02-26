@@ -14,4 +14,5 @@
 - (id<GKRegionBackend>)regionBackend;
 - (id<GKAddressService>)addressService;
 - (id<GKAddressBackend>)addressBackend;
+- (id<GKAddressRepository>)addressRepository;
 @end

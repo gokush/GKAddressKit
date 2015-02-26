@@ -8,7 +8,7 @@
 
 #import "GKAddressServiceImpl.h"
 #import "GKAddressCommon.h"
-
+#import <ReactiveCocoa/RACEXTScope.h>
 #import "GKAddressKitExample-Swift.h"
 
 @implementation GKAddressServiceImpl
@@ -78,24 +78,53 @@
 
 - (RACSignal *)addressesWithUser:(GKUser *)user
 {
+  @weakify(self)
   return
   [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-    
+    @strongify(self)
     [[self.repository findAddressesWithUser:user]
      subscribeNext:^(NSArray *addresses) {
       [subscriber sendNext:addresses];
+       
+       [[self.backend fetchAddresses] subscribeNext:^(id x) {
+         [subscriber sendNext:x];
+         [subscriber sendCompleted];
+       } error:^(NSError *error) {
+         [subscriber sendError:error];
+       }];
+    } error:^(NSError *error) {
+      
     }];
      
-    [[self.backend fetchAddresses] subscribeNext:^(id x) {
-      [subscriber sendNext:x];
-      [subscriber sendCompleted];
-    } error:^(NSError *error) {
-      [subscriber sendError:error];
-      [subscriber sendCompleted];
-    }];
+    
     
     return [RACDisposable disposableWithBlock:^{
     }];
+  }];
+}
+
+- (RACSignal *)create:(GKAddress *)address;
+{
+  @weakify(self);
+  return
+  [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    @strongify(self)
+    [[self.repository create:address] subscribeNext:^(GKAddress *address) {
+      [[self.backend create:address] subscribeNext:^(GKAddress *remote) {
+        [self.repository update:remote];
+        [address update:remote];
+        [subscriber sendNext:RACTuplePack(address, @(GKAddressQueueNone))];
+        [subscriber sendCompleted];
+      } error:^(NSError *error) {
+        [self.repository addQueue:address queue:GKAddressQueueCreate];
+        [subscriber sendNext:RACTuplePack(address, @(GKAddressQueueCreate))];
+        [subscriber sendCompleted];
+      }];
+    } error:^(NSError *error) {
+      [subscriber sendError:error];
+    }];
+    
+    return (RACDisposable *)nil;
   }];
 }
 

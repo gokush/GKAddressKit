@@ -48,4 +48,18 @@
     }];
   }];
 }
+
+- (RACSignal *)create:(GKAddress *)address
+{
+  return
+  [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    GKAddress *cloned = [address clone];
+    cloned.addressID = 1;
+    
+    [subscriber sendNext:cloned];
+    [subscriber sendCompleted];
+    
+    return (RACDisposable *)nil;
+  }];
+}
 @end
