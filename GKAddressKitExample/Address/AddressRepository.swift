@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class AddressRepository: NSObject {
+class AddressRepository: NSObject, GKAddressRepository {
     var managedObjectContext: NSManagedObjectContext?
     
     class var sharedInstance: AddressRepository{
@@ -26,6 +26,21 @@ class AddressRepository: NSObject {
         
     }
     */
+    
+    func findAddressesWithUser(user: GKUser!) -> RACSignal! {
+        let fetchRequest = NSFetchRequest(entityName: "AddressEntity")
+        fetchRequest.predicate = NSPredicate(format: "user")
+        var error: NSError?
+        let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error)
+    }
+    
+    func create(address: GKAddress!) -> RACSignal! {
+        
+    }
+    
+    func update(address: GKAddress!) -> RACSignal! {
+        
+    }
     
     func deleteAddress(address: AddressEntity){
         self.managedObjectContext?.deleteObject(address)

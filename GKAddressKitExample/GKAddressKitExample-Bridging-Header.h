@@ -9,3 +9,4 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "GKAddressListController.h"
 #import "GKAddressContainerMock.h"
+#import "GKAddressRepository.h"
