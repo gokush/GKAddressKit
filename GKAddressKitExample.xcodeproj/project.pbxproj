@@ -10,6 +10,7 @@
 		159E73F3122FA37966AC2DF8 /* libPods-GKAddressKitExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C824CD0325FDBC328DC31F9 /* libPods-GKAddressKitExampleTests.a */; };
 		E510DDC91A9F6BD800B9EB19 /* GKAddressSynchronization.m in Sources */ = {isa = PBXBuildFile; fileRef = E510DDC81A9F6BD800B9EB19 /* GKAddressSynchronization.m */; };
 		E555C3BE1A9B5E1600836965 /* GKAddressRepositoryMock.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C3BD1A9B5E1600836965 /* GKAddressRepositoryMock.m */; };
+		E564789A1AA313E7006CE49A /* GKAddressRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56478991AA313E7006CE49A /* GKAddressRepositoryImplTests.swift */; };
 		E56FEFB41A96293100C628B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFB31A96293100C628B3 /* AppDelegate.swift */; };
 		E56FEFB71A96293100C628B3 /* GKAddressKitExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFB51A96293100C628B3 /* GKAddressKitExample.xcdatamodeld */; };
 		E56FEFB91A96293100C628B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFB81A96293100C628B3 /* ViewController.swift */; };
@@ -76,6 +77,7 @@
 		E510DDC81A9F6BD800B9EB19 /* GKAddressSynchronization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAddressSynchronization.m; sourceTree = "<group>"; };
 		E555C3BC1A9B5E1600836965 /* GKAddressRepositoryMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddressRepositoryMock.h; sourceTree = "<group>"; };
 		E555C3BD1A9B5E1600836965 /* GKAddressRepositoryMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAddressRepositoryMock.m; sourceTree = "<group>"; };
+		E56478991AA313E7006CE49A /* GKAddressRepositoryImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKAddressRepositoryImplTests.swift; sourceTree = "<group>"; };
 		E56FEFAE1A96293100C628B3 /* GKAddressKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GKAddressKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56FEFB21A96293100C628B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E56FEFB31A96293100C628B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				E5A126F61A98CBBA0016AF23 /* GKAddressKitExampleTests-Bridging-Header.h */,
 				E5A126F91A98CCA10016AF23 /* GKAddressKitBackendTest.swift */,
 				E5A126FB1A98CF5B0016AF23 /* GKAddressServiceTest.swift */,
+				E56478991AA313E7006CE49A /* GKAddressRepositoryImplTests.swift */,
 			);
 			path = GKAddressKitExampleTests;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 			files = (
 				E5A126FA1A98CCA10016AF23 /* GKAddressKitBackendTest.swift in Sources */,
 				E56FEFCD1A96293100C628B3 /* GKAddressKitExampleTests.swift in Sources */,
+				E564789A1AA313E7006CE49A /* GKAddressRepositoryImplTests.swift in Sources */,
 				E5A126FC1A98CF5B0016AF23 /* GKAddressServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
