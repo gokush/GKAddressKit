@@ -132,7 +132,34 @@ class AddressRepository: NSObject, GKAddressRepository {
         var error: NSError?
         let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [AddressEntity]
         let addressEntity = results?.last
-        return nil
+        if addressEntity != nil{
+            addressEntity?.name = address.name
+            addressEntity?.cellphone = address.cellPhone
+            addressEntity?.postcode = address.postcode
+            addressEntity?.address = address.address
+            addressEntity?.updateAt = NSDate()
+            let province = findProvinceWithId(address.province.provinceID)
+            if province != nil{
+                addressEntity?.addProvinceObject(province!)
+                province?.addAddressesObject(addressEntity!)
+                let city = findCityWithId(address.city.cityID, province: province!)
+                if city != nil{
+                    addressEntity?.addCityObject(city!)
+                    city?.addAddressesObject(addressEntity!)
+                    let district = findDistrict(address.county.countyID, city: city!)
+                    if district == nil{
+                        addressEntity?.addDistrictObject(district!)
+                        district?.addAddressesObject(addressEntity!)
+                    }
+                }
+            }
+            save()
+        }
+        return RACSignal.createSignal({ (subscriber) -> RACDisposable! in
+            subscriber.sendNext(address)
+            subscriber.sendCompleted()
+            return nil
+        })
     }
     
     func updatePrimary(address: GKAddress!) -> RACSignal! {
