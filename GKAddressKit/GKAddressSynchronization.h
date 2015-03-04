@@ -13,6 +13,7 @@
 @interface GKAddressSynchronization : NSObject
 
 @property (assign, nonatomic) NSInteger code;
++ (GKAddressSynchronization *)synchronizationWithInteger:(NSInteger)number;
 @end
 
 /// 地址提交成功

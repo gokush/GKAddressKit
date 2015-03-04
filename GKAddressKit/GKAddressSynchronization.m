@@ -22,6 +22,29 @@
 {
     return @"";
 }
+
++ (GKAddressSynchronization *)synchronizationWithInteger:(NSInteger)number
+{
+    GKAddressSynchronization *sync;
+    switch (number) {
+        case 1:
+            sync = [[GKAddressSynchronizationSuccess alloc] init];
+            break;
+        case 2:
+            sync = [[GKAddressSynchronizationFailure alloc] init];
+        case 3:
+            sync = [[GKAddressSynchronizationMissingNetwork alloc] init];
+            break;
+        case 4:
+            sync = [[GKAddressSynchronizationSending alloc] init];
+            break;
+        default:
+        case 5:
+            sync = [[GKAddressSynchronizationAgain alloc] init];
+            break;
+    }
+    return sync;
+}
 @end
 
 @implementation GKAddressSynchronizationSuccess
