@@ -32,7 +32,7 @@ class AddressUtils: NSObject {
         gkAddress.province = gkProvince(addressEntity.province)
         gkAddress.city = gkCity(addressEntity.city)
         gkAddress.county = gkCounty(addressEntity.district)
-        
+        gkAddress.synchronization = GKAddressSynchronization(integer: addressEntity.sync.integerValue)
         return gkAddress
     }
     

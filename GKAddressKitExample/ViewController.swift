@@ -71,7 +71,7 @@ class ViewController: UIViewController, FetchedResultsControllerDataSourceDelega
             
             let aAddresses = addresses as [GKAddress]
             for item in aAddresses{
-                print("\(item.localID)  \(item.synchronization.code)")
+                print("\(item.localID)  \(item.synchronization.description)   ")
                 println(item.address)
             }
             
@@ -79,18 +79,31 @@ class ViewController: UIViewController, FetchedResultsControllerDataSourceDelega
             
         })
         
-        address.synchronization = GKAddressSynchronizationSuccess()
-        address.addressID = 1010
+        let add = GKAddress()
+        add.userID = 1
+        add.localID = 3
+        add.addressID = 1010
+        add.synchronization = GKAddressSynchronizationSuccess()
         
-        addressRepository.updatePrimary(address)
+        addressRepository.updatePrimary(add).subscribeNext({ (address) -> Void in
+            
+            let aAddress = address as GKAddress
+            println(aAddress.localID)
+            
+        }, error: { (errors) -> Void in
+            
+            let aErrors = errors as NSError
+            println(aErrors.domain)
+            
+        })
         
-        println("***************")
-        
+//        println("***************")
+//        
 //        addressRepository.findAddressesWithUser(user).subscribeNext({ (addresses) -> Void in
 //            
 //            let aAddresses = addresses as [GKAddress]
 //            for item in aAddresses{
-//                print("\(item.localID)  \(item.synchronization.code)")
+//                print("\(item.localID)  \(item.synchronization.description)   ")
 //                println(item.address)
 //            }
 //            

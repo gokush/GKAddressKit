@@ -91,7 +91,7 @@ class AddressRepository: NSObject, GKAddressRepository {
                 else{
                     addressEntity?.addDistrictObject(district!)
                     district?.addAddressesObject(addressEntity!)
-                    managedObjectContext?.save(nil)
+                    save()
                 }
             }
         }
@@ -109,23 +109,42 @@ class AddressRepository: NSObject, GKAddressRepository {
     }
     
     func update(address: GKAddress!) -> RACSignal! {
-        
-        return nil
-    }
-    
-    func updatePrimary(address: GKAddress!) -> RACSignal! {
         let fetchRequest = NSFetchRequest(entityName: "AddressEntity")
         fetchRequest.predicate = NSPredicate(format: "userId = \(address.userID)")
         var error: NSError?
         let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [AddressEntity]
         let addressEntity = results?.last
+        return nil
+    }
+    
+    func updatePrimary(address: GKAddress!) -> RACSignal! {
+        var success = true
+        let fetchRequest = NSFetchRequest(entityName: "AddressEntity")
+        fetchRequest.predicate = NSPredicate(format: "userId = \(address.userID) AND localId = \(address.localID)")
+        var error: NSError?
+        let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [AddressEntity]
+        let addressEntity = results?.last
         if addressEntity != nil{
             addressEntity?.addressId = address.addressID
+            println(address.synchronization.description)
             addressEntity?.sync = address.synchronization.code
             addressEntity?.updateAt = NSDate()
             save()
         }
-        return nil
+        else{
+            success = false
+        }
+        return RACSignal.createSignal({ (subscriber) -> RACDisposable! in
+            if success{
+                subscriber.sendNext(address)
+            }
+            else{
+                let error = NSError(domain: "update addressId fail!!", code: 0, userInfo: nil)
+                subscriber.sendError(error)
+            }
+            subscriber.sendCompleted()
+            return nil
+        })
     }
     
     func remove(address: GKAddress!) -> RACSignal! {
