@@ -50,7 +50,25 @@ class AddressRepository: NSObject, GKAddressRepository {
     }
     
     func findFailureAddressesWithUser(user: GKUser!) -> RACSignal! {
-        return nil
+        let fetchRequest = NSFetchRequest(entityName: "AddressEntity")
+        fetchRequest.predicate = NSPredicate(format: "userId = \(user.userID) AND sync = \(GKAddressSynchronizationFailure().code)")
+        var error: NSError?
+        let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [AddressEntity]
+        var addrArray = [GKAddress]()
+        if results != nil{
+            addrArray = AddressUtils.gkAddresses(results!)
+        }
+        return
+            RACSignal.createSignal({ (subscriber) -> RACDisposable! in
+                
+                subscriber.sendNext(addrArray)
+                subscriber.sendCompleted()
+                
+                return RACDisposable(block: { () -> Void in
+                    
+                })
+                
+            })
     }
     
     func create(address: GKAddress!) -> RACSignal! {
