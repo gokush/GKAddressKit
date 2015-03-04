@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class PersistenStack {
+class PersistenStack: NSObject {
    
     var managedObjectContext: NSManagedObjectContext?
     var backgroundManagedObjectContext: NSManagedObjectContext?
@@ -19,6 +19,7 @@ class PersistenStack {
     init(storeURL: NSURL, modelURL: NSURL){
         self.storeURL = storeURL
         self.modelURL = modelURL
+        super.init()
         self.setupManagedObjectContexts()
     }
     

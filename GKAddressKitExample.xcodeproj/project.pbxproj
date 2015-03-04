@@ -8,7 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		159E73F3122FA37966AC2DF8 /* libPods-GKAddressKitExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C824CD0325FDBC328DC31F9 /* libPods-GKAddressKitExampleTests.a */; };
+		341BE3811AA58A9900224D70 /* GKAddressModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFEA1A962B5A00C628B3 /* GKAddressModel.xcdatamodeld */; };
+		342C9CB91AA5E2E700E781F6 /* AddressUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C9CB81AA5E2E700E781F6 /* AddressUtils.swift */; };
+		342C9CBA1AA5EA0900E781F6 /* AddressUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C9CB81AA5E2E700E781F6 /* AddressUtils.swift */; };
+		344AD10B1AA4766D001C0CD9 /* CityEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFE71A962B5A00C628B3 /* CityEntity.swift */; };
+		344AD10C1AA47671001C0CD9 /* DistrictEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFE81A962B5A00C628B3 /* DistrictEntity.swift */; };
+		344AD10D1AA47674001C0CD9 /* AddressEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFE51A962B5A00C628B3 /* AddressEntity.swift */; };
+		344AD10E1AA47679001C0CD9 /* AddressRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFE61A962B5A00C628B3 /* AddressRepository.swift */; };
+		344AD10F1AA4767F001C0CD9 /* FetchedResultsControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFE91A962B5A00C628B3 /* FetchedResultsControllerDataSource.swift */; };
+		344AD1101AA47682001C0CD9 /* ManagedObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFEC1A962B5A00C628B3 /* ManagedObject+Extensions.swift */; };
+		344AD1111AA47685001C0CD9 /* PersistenStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFED1A962B5A00C628B3 /* PersistenStack.swift */; };
+		344AD1121AA47688001C0CD9 /* ProvinceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFEE1A962B5A00C628B3 /* ProvinceEntity.swift */; };
+		E510DDC91A9F6BD800B9EB19 /* GKAddressSynchronization.m in Sources */ = {isa = PBXBuildFile; fileRef = E510DDC81A9F6BD800B9EB19 /* GKAddressSynchronization.m */; };
 		E555C3BE1A9B5E1600836965 /* GKAddressRepositoryMock.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C3BD1A9B5E1600836965 /* GKAddressRepositoryMock.m */; };
+		E564789A1AA313E7006CE49A /* GKAddressRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56478991AA313E7006CE49A /* GKAddressRepositoryImplTests.swift */; };
 		E56FEFB41A96293100C628B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFB31A96293100C628B3 /* AppDelegate.swift */; };
 		E56FEFB71A96293100C628B3 /* GKAddressKitExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFB51A96293100C628B3 /* GKAddressKitExample.xcdatamodeld */; };
 		E56FEFB91A96293100C628B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFB81A96293100C628B3 /* ViewController.swift */; };
@@ -50,7 +63,6 @@
 		E5A126F21A98C5B70016AF23 /* GKAddressBackendMock.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126F11A98C5B70016AF23 /* GKAddressBackendMock.m */; };
 		E5A126F51A98C6DD0016AF23 /* GKAddressContainerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126F41A98C6DD0016AF23 /* GKAddressContainerMock.m */; };
 		E5A126FA1A98CCA10016AF23 /* GKAddressKitBackendTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A126F91A98CCA10016AF23 /* GKAddressKitBackendTest.swift */; };
-		E5A126FC1A98CF5B0016AF23 /* GKAddressServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A126FB1A98CF5B0016AF23 /* GKAddressServiceTest.swift */; };
 		E8EA7BD7D2B2C682DEDE9556 /* libPods-GKAddressKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CE75E3FBD8F1093B1513C8 /* libPods-GKAddressKitExample.a */; };
 /* End PBXBuildFile section */
 
@@ -66,13 +78,17 @@
 
 /* Begin PBXFileReference section */
 		0D77AD299A178C46B787423E /* Pods-GKAddressKitExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKAddressKitExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKAddressKitExampleTests/Pods-GKAddressKitExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		342C9CB81AA5E2E700E781F6 /* AddressUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressUtils.swift; sourceTree = "<group>"; };
 		5C824CD0325FDBC328DC31F9 /* libPods-GKAddressKitExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKAddressKitExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76521D88F191DD3E20E0CB32 /* Pods-GKAddressKitExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKAddressKitExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GKAddressKitExampleTests/Pods-GKAddressKitExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		78418E27FE5D146F33ABEEBD /* Pods-GKAddressKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKAddressKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-GKAddressKitExample/Pods-GKAddressKitExample.release.xcconfig"; sourceTree = "<group>"; };
 		A59B54D707C6B281AF6AC9ED /* Pods-GKAddressKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKAddressKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GKAddressKitExample/Pods-GKAddressKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		C1CE75E3FBD8F1093B1513C8 /* libPods-GKAddressKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GKAddressKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E510DDC71A9F6BD800B9EB19 /* GKAddressSynchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddressSynchronization.h; sourceTree = "<group>"; };
+		E510DDC81A9F6BD800B9EB19 /* GKAddressSynchronization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAddressSynchronization.m; sourceTree = "<group>"; };
 		E555C3BC1A9B5E1600836965 /* GKAddressRepositoryMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddressRepositoryMock.h; sourceTree = "<group>"; };
 		E555C3BD1A9B5E1600836965 /* GKAddressRepositoryMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAddressRepositoryMock.m; sourceTree = "<group>"; };
+		E56478991AA313E7006CE49A /* GKAddressRepositoryImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKAddressRepositoryImplTests.swift; sourceTree = "<group>"; };
 		E56FEFAE1A96293100C628B3 /* GKAddressKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GKAddressKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56FEFB21A96293100C628B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E56FEFB31A96293100C628B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -245,6 +261,7 @@
 				E5A126F61A98CBBA0016AF23 /* GKAddressKitExampleTests-Bridging-Header.h */,
 				E5A126F91A98CCA10016AF23 /* GKAddressKitBackendTest.swift */,
 				E5A126FB1A98CF5B0016AF23 /* GKAddressServiceTest.swift */,
+				E56478991AA313E7006CE49A /* GKAddressRepositoryImplTests.swift */,
 			);
 			path = GKAddressKitExampleTests;
 			sourceTree = "<group>";
@@ -269,6 +286,7 @@
 				E56FEFEC1A962B5A00C628B3 /* ManagedObject+Extensions.swift */,
 				E56FEFED1A962B5A00C628B3 /* PersistenStack.swift */,
 				E56FEFEE1A962B5A00C628B3 /* ProvinceEntity.swift */,
+				342C9CB81AA5E2E700E781F6 /* AddressUtils.swift */,
 			);
 			path = Address;
 			sourceTree = "<group>";
@@ -314,6 +332,8 @@
 				E5A126FD1A98D2180016AF23 /* GKAddressRepository.h */,
 				E555C3BC1A9B5E1600836965 /* GKAddressRepositoryMock.h */,
 				E555C3BD1A9B5E1600836965 /* GKAddressRepositoryMock.m */,
+				E510DDC71A9F6BD800B9EB19 /* GKAddressSynchronization.h */,
+				E510DDC81A9F6BD800B9EB19 /* GKAddressSynchronization.m */,
 			);
 			path = GKAddressKit;
 			sourceTree = "<group>";
@@ -535,6 +555,7 @@
 				E56FEFEF1A962B5A00C628B3 /* AddressEntity.swift in Sources */,
 				E56FEFF01A962B5A00C628B3 /* AddressRepository.swift in Sources */,
 				E56FEFB71A96293100C628B3 /* GKAddressKitExample.xcdatamodeld in Sources */,
+				342C9CB91AA5E2E700E781F6 /* AddressUtils.swift in Sources */,
 				E56FEFE21A96297300C628B3 /* AreaPicker.swift in Sources */,
 				E56FF0211A963F9100C628B3 /* GKCounty.m in Sources */,
 				E5A126EF1A98C5110016AF23 /* GKAddressBackendImpl.m in Sources */,
@@ -558,6 +579,7 @@
 				E5A126F21A98C5B70016AF23 /* GKAddressBackendMock.m in Sources */,
 				E56FEFF51A962B5A00C628B3 /* ManagedObject+Extensions.swift in Sources */,
 				E56FEFE01A96297300C628B3 /* AddressEditViewController.swift in Sources */,
+				E510DDC91A9F6BD800B9EB19 /* GKAddressSynchronization.m in Sources */,
 				E56FEFB41A96293100C628B3 /* AppDelegate.swift in Sources */,
 				E56FEFDF1A96297300C628B3 /* AddressEditCell.swift in Sources */,
 				E5A126F51A98C6DD0016AF23 /* GKAddressContainerMock.m in Sources */,
@@ -568,9 +590,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				344AD1101AA47682001C0CD9 /* ManagedObject+Extensions.swift in Sources */,
+				344AD10E1AA47679001C0CD9 /* AddressRepository.swift in Sources */,
+				344AD1121AA47688001C0CD9 /* ProvinceEntity.swift in Sources */,
 				E5A126FA1A98CCA10016AF23 /* GKAddressKitBackendTest.swift in Sources */,
+				344AD10B1AA4766D001C0CD9 /* CityEntity.swift in Sources */,
+				344AD10C1AA47671001C0CD9 /* DistrictEntity.swift in Sources */,
+				344AD10F1AA4767F001C0CD9 /* FetchedResultsControllerDataSource.swift in Sources */,
+				341BE3811AA58A9900224D70 /* GKAddressModel.xcdatamodeld in Sources */,
+				342C9CBA1AA5EA0900E781F6 /* AddressUtils.swift in Sources */,
 				E56FEFCD1A96293100C628B3 /* GKAddressKitExampleTests.swift in Sources */,
-				E5A126FC1A98CF5B0016AF23 /* GKAddressServiceTest.swift in Sources */,
+				344AD10D1AA47674001C0CD9 /* AddressEntity.swift in Sources */,
+				E564789A1AA313E7006CE49A /* GKAddressRepositoryImplTests.swift in Sources */,
+				344AD1111AA47685001C0CD9 /* PersistenStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "GKUser.h"
 #import "GKAddress.h"
 #import "GKAddressService.h"
+#import "GKAddressRepository.h"
 
 typedef enum {
   AddressNameCell,

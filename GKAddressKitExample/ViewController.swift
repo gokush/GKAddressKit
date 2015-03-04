@@ -15,6 +15,7 @@ class ViewController: UIViewController, FetchedResultsControllerDataSourceDelega
   
   var provinces:NSArray?;
   let service:GKAddressService = GKAddressContainerImpl().addressService()
+    let addressRepository = AddressRepository.sharedInstance
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,80 @@ class ViewController: UIViewController, FetchedResultsControllerDataSourceDelega
       controller.service = GKAddressContainerMock().addressService()
       self.navigationController?.pushViewController(controller, animated: true)
       
+//        let province = addressRepository.findProvinceWithId(2)
+//        println(province?.name)
+//        
+//        let city = addressRepository.findCityWithId(21, province: province!)
+//        println(city?.name)
+//        
+//        let district = addressRepository.findDistrict(212, city: city!)
+//        println(district?.name)
+        
+        refreshDate()
+        
+        let address = GKAddress()
+        let province = GKProvince()
+        province.provinceID = 2
+        let city = GKCity()
+        city.cityID = 21
+        let county = GKCounty()
+        county.countyID = 212
+        address.userID = 1
+        address.addressID = 1
+        address.localID = 101
+        address.name = "tong"
+        address.cellPhone = "1312099999999"
+        address.postcode = "321300"
+        address.address = "昌平路700号"
+        address.isDefault = true
+        address.province = province
+        address.city = city
+        address.county = county
+        address.synchronization = GKAddressSynchronizationSending()
+        addressRepository.create(address).subscribeNext({ (success) -> Void in
+            
+            println(success)
+            
+        }, error: { (error) -> Void in
+            
+            println("error")
+            
+        })
+        
+        let user = GKUser()
+        user.userID = 1
+        addressRepository.findAddressesWithUser(user).subscribeNext({ (addresses) -> Void in
+            
+            let aAddresses = addresses as [GKAddress]
+            for item in aAddresses{
+                print("\(item.localID)  \(item.synchronization.code)")
+                println(item.address)
+            }
+            
+        }, error: { (error) -> Void in
+            
+        })
+        
+        address.synchronization = GKAddressSynchronizationSuccess()
+        address.addressID = 1010
+        
+        addressRepository.updatePrimary(address)
+        
+        println("***************")
+        
+//        addressRepository.findAddressesWithUser(user).subscribeNext({ (addresses) -> Void in
+//            
+//            let aAddresses = addresses as [GKAddress]
+//            for item in aAddresses{
+//                print("\(item.localID)  \(item.synchronization.code)")
+//                println(item.address)
+//            }
+//            
+//            }, error: { (error) -> Void in
+//                
+//        })
+        
+        
 //        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: UIBarButtonItemStyle.Plain, target: self, action: "addAddressButtonClick:")
 //        self.tableView.tableFooterView = UIView()
 //        
@@ -31,6 +106,10 @@ class ViewController: UIViewController, FetchedResultsControllerDataSourceDelega
 //        setupFetchedResultsControllerDataSource()
 //        
 //        let provinces = AddressRepository.sharedInstance.fetchProvinces()
+//        let province = AddressRepository.sharedInstance.findProvinceWithId(1)
+        
+//        println(province?.name)
+        
 //        for item in provinces{
 //            print("\(item.name)    ")
 //            println(item.addresses.count)
@@ -70,12 +149,13 @@ class ViewController: UIViewController, FetchedResultsControllerDataSourceDelega
         let jsonPath = NSBundle.mainBundle().pathForResource("province", ofType: "json")
         let jsonData = NSData(contentsOfFile: jsonPath!)
         let jsonArray = NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions.MutableContainers, error: nil) as [AnyObject]
-        var tpstart = timeval(tv_sec: 0, tv_usec: 0)
-        var tpend = timeval(tv_sec: 0, tv_usec: 0)
-        gettimeofday(&tpstart, nil)
+        //测试更新时间
+//        var tpstart = timeval(tv_sec: 0, tv_usec: 0)
+//        var tpend = timeval(tv_sec: 0, tv_usec: 0)
+//        gettimeofday(&tpstart, nil)
         AddressRepository.sharedInstance.updateProvince(jsonArray)
-        gettimeofday(&tpend, nil)
-        println(tpend.tv_usec - tpstart.tv_usec)
+//        gettimeofday(&tpend, nil)
+//        println(tpend.tv_usec - tpstart.tv_usec)
     }
     
     func setupFetchedResultsControllerDataSource(){
@@ -100,7 +180,7 @@ class ViewController: UIViewController, FetchedResultsControllerDataSourceDelega
     func deleteObject(object: AnyObject)
     {
         let address = object as AddressEntity
-        AddressRepository.sharedInstance.deleteAddress(address)
+//        AddressRepository.sharedInstance.deleteAddress(address)
     }
 
 }

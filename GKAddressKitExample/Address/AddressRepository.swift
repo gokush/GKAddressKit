@@ -29,22 +29,111 @@ class AddressRepository: NSObject, GKAddressRepository {
     
     func findAddressesWithUser(user: GKUser!) -> RACSignal! {
         let fetchRequest = NSFetchRequest(entityName: "AddressEntity")
-        fetchRequest.predicate = NSPredicate(format: "user")
+        fetchRequest.predicate = NSPredicate(format: "userId = \(user.userID)")
         var error: NSError?
-        let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error)
+        let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [AddressEntity]
+        var addrArray = [GKAddress]()
+        if results != nil{
+            addrArray = AddressUtils.gkAddresses(results!)
+        }
+        return
+            RACSignal.createSignal({ (subscriber) -> RACDisposable! in
+                
+                subscriber.sendNext(addrArray)
+                subscriber.sendCompleted()
+        
+                return RACDisposable(block: { () -> Void in
+                    
+                })
+                
+            })
+    }
+    
+    func findFailureAddressesWithUser(user: GKUser!) -> RACSignal! {
+        return nil
     }
     
     func create(address: GKAddress!) -> RACSignal! {
-        
+        var success = true
+        let addressEntity = NSEntityDescription.insertNewObjectForEntityForName("AddressEntity", inManagedObjectContext: managedObjectContext!) as? AddressEntity
+        if addressEntity == nil{
+            success = false
+        }
+        addressEntity?.userId = address.userID
+        addressEntity?.addressId = address.addressID
+        addressEntity?.localId = getLocalId()
+        addressEntity?.name = address.name
+        addressEntity?.cellphone = address.cellPhone
+        addressEntity?.postcode = address.postcode
+        addressEntity?.address = address.address
+        addressEntity?.isDefault = address.isDefault
+        addressEntity?.sync = address.synchronization.code
+        addressEntity?.createAt = NSDate()
+        addressEntity?.updateAt = NSDate()
+        let province = findProvinceWithId(address.province.provinceID)
+        if province == nil{
+            success = false
+        }
+        else{
+            addressEntity?.addProvinceObject(province!)
+            province?.addAddressesObject(addressEntity!)
+            let city = findCityWithId(address.city.cityID, province: province!)
+            if city == nil{
+                success = false
+            }
+            else{
+                addressEntity?.addCityObject(city!)
+                city?.addAddressesObject(addressEntity!)
+                let district = findDistrict(address.county.countyID, city: city!)
+                if district == nil{
+                    success = false
+                }
+                else{
+                    addressEntity?.addDistrictObject(district!)
+                    district?.addAddressesObject(addressEntity!)
+                    managedObjectContext?.save(nil)
+                }
+            }
+        }
+        return RACSignal.createSignal({ (subscriber) -> RACDisposable! in
+            if success{
+                subscriber.sendNext("success")
+            }
+            else{
+                let error = NSError()
+                subscriber.sendError(error)
+            }
+            subscriber.sendCompleted()
+            return nil
+        })
     }
     
     func update(address: GKAddress!) -> RACSignal! {
         
+        return nil
     }
     
-    func deleteAddress(address: AddressEntity){
-        self.managedObjectContext?.deleteObject(address)
-        save()
+    func updatePrimary(address: GKAddress!) -> RACSignal! {
+        let fetchRequest = NSFetchRequest(entityName: "AddressEntity")
+        fetchRequest.predicate = NSPredicate(format: "userId = \(address.userID)")
+        var error: NSError?
+        let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [AddressEntity]
+        let addressEntity = results?.last
+        if addressEntity != nil{
+            addressEntity?.addressId = address.addressID
+            addressEntity?.sync = address.synchronization.code
+            addressEntity?.updateAt = NSDate()
+            save()
+        }
+        return nil
+    }
+    
+    func remove(address: GKAddress!) -> RACSignal! {
+        return nil
+    }
+    
+    func setDefault(address: GKAddress!) -> RACSignal! {
+        return nil
     }
     
     //添加新地址
@@ -79,6 +168,53 @@ class AddressRepository: NSObject, GKAddressRepository {
         var error: NSError?
         let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error)
         return results as [ProvinceEntity]
+    }
+    //查找某个省份
+    func findProvinceWithId(provinceId: Int) -> ProvinceEntity?{
+        let fetchRequest = NSFetchRequest(entityName: "ProvinceEntity")
+        fetchRequest.predicate = NSPredicate(format: "provinceId = \(provinceId)")
+        var error: NSError?
+        let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error)
+        let province = results?.last as? ProvinceEntity
+        return province
+    }
+    //查找某给城市
+    func findCityWithId(cityId: Int, province: ProvinceEntity) -> CityEntity?{
+        let cities = province.cities.allObjects as [CityEntity]
+        var city: CityEntity?
+        for item in cities{
+            if item.cityId.integerValue == cityId{
+                city = item
+                break
+            }
+        }
+        return city
+    }
+    //查找区域
+    func findDistrict(districtId: Int, city: CityEntity) -> DistrictEntity?{
+        let districts = city.districts.allObjects as [DistrictEntity]
+        var district: DistrictEntity?
+        for item in districts{
+            if item.districtId.integerValue == districtId{
+                district = item
+            }
+        }
+        return district
+    }
+    //取得一个Address的localId
+    func getLocalId() -> Int{
+        let fetchRequest = NSFetchRequest(entityName: "AddressEntity")
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "localId", ascending: false)]
+        fetchRequest.fetchLimit = 1
+        var error: NSError?
+        let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [AddressEntity]
+        if results == nil{
+            return 1
+        }
+        else{
+            let address = results!.last
+            return address!.localId.integerValue + 1
+        }
     }
     
     func fetchDistricts() -> [DistrictEntity]?{

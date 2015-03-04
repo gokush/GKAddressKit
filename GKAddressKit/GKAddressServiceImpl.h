@@ -10,12 +10,14 @@
 #import "GKAddressService.h"
 #import "GKRegionBackend.h"
 #import "GKAddressBackend.h"
+#import "GKAddressKitExample-swift.h"
 
 @interface GKAddressServiceImpl : NSObject <GKAddressService>
 
 @property (strong, nonatomic) id<GKRegionBackend> regionBackend;
 @property (strong, nonatomic) id<GKAddressBackend> backend;
 @property (strong, nonatomic) id<GKAddressRepository> repository;
+@property (strong, nonatomic) PersistenStack *persistenStack;
 
 - (id)initWithRegionBackend:(id<GKRegionBackend>)regionBackend;
 - (RACSignal *)provinces;
