@@ -16,6 +16,7 @@
 
 @interface GKAddress : NSObject
 
+@property (assign, nonatomic) NSInteger userID;
 @property (assign, nonatomic) NSInteger addressID;
 @property (assign, nonatomic) NSInteger localID;
 @property (strong, nonatomic) NSString *name;

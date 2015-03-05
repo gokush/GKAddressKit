@@ -32,6 +32,7 @@ typedef NS_ENUM(NSInteger, GKAddressQueue) {
 - (RACSignal *)findFailureAddressesWithUser:(GKUser *)user;
 - (RACSignal *)create:(GKAddress *)address;
 - (RACSignal *)update:(GKAddress *)address;
+
 /// 更新class GKAddress对象的主键和最后更新日期
 ///
 /// 当远程服务器成功保存用户地址后，返回的数据里面包含地址在远程服务器的数据库中的主键值和最后
@@ -46,4 +47,5 @@ typedef NS_ENUM(NSInteger, GKAddressQueue) {
 - (RACSignal *)updatePrimary:(GKAddress *)address;
 - (RACSignal *)remove:(GKAddress *)address;
 - (RACSignal *)setDefault:(GKAddress *)address;
+
 @end

@@ -11,12 +11,17 @@ import CoreData
 
 @objc(AddressEntity) class AddressEntity: NSManagedObject {
 
+    @NSManaged var userId: NSNumber
     @NSManaged var addressId: NSNumber
+    @NSManaged var localId: NSNumber
     @NSManaged var name: String
     @NSManaged var cellphone: String
     @NSManaged var postcode: String
     @NSManaged var address: String
     @NSManaged var isDefault: NSNumber
+    @NSManaged var sync: NSNumber
+    @NSManaged var createAt: NSDate
+    @NSManaged var updateAt: NSDate
     @NSManaged var province: ProvinceEntity
     @NSManaged var city: CityEntity
     @NSManaged var district: DistrictEntity
