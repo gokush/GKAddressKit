@@ -10,6 +10,7 @@ target 'GKAddressKitExample' do
     pod 'GKUserKit', # :path => '~/workspace/GKUserKit'
         :git => 'https://github.com/gokush/GKUserKit'
     pod 'OCMock'
+    pod 'MBProgressHUD'
 end
 
 target 'GKAddressKitExampleTests' do

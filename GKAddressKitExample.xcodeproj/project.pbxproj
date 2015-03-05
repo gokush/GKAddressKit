@@ -11,6 +11,10 @@
 		E510DDC91A9F6BD800B9EB19 /* GKAddressSynchronization.m in Sources */ = {isa = PBXBuildFile; fileRef = E510DDC81A9F6BD800B9EB19 /* GKAddressSynchronization.m */; };
 		E555C3BE1A9B5E1600836965 /* GKAddressRepositoryMock.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C3BD1A9B5E1600836965 /* GKAddressRepositoryMock.m */; };
 		E564789A1AA313E7006CE49A /* GKAddressRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56478991AA313E7006CE49A /* GKAddressRepositoryImplTests.swift */; };
+		E56D2BEB1AA73373008380C9 /* AddressEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56D2BE31AA73373008380C9 /* AddressEditController.m */; };
+		E56D2BEC1AA73373008380C9 /* AddressEditInputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E56D2BE71AA73373008380C9 /* AddressEditInputTableViewCell.m */; };
+		E56D2BED1AA73373008380C9 /* AddressEditInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56D2BE81AA73373008380C9 /* AddressEditInputTableViewCell.xib */; };
+		E56D2BEE1AA73373008380C9 /* AddressEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56D2BEA1AA73373008380C9 /* AddressEditView.xib */; };
 		E56FEFB41A96293100C628B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFB31A96293100C628B3 /* AppDelegate.swift */; };
 		E56FEFB71A96293100C628B3 /* GKAddressKitExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFB51A96293100C628B3 /* GKAddressKitExample.xcdatamodeld */; };
 		E56FEFB91A96293100C628B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FEFB81A96293100C628B3 /* ViewController.swift */; };
@@ -39,7 +43,7 @@
 		E56FF0221A963F9100C628B3 /* GKProvince.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF0191A963F9100C628B3 /* GKProvince.m */; };
 		E56FF0231A963F9100C628B3 /* GKTown.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF01B1A963F9100C628B3 /* GKTown.m */; };
 		E56FF0241A963F9100C628B3 /* GKVillage.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF01D1A963F9100C628B3 /* GKVillage.m */; };
-		E56FF0251A963F9100C628B3 /* GKRegionPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF01F1A963F9100C628B3 /* GKRegionPickerView.m */; };
+		E56FF0251A963F9100C628B3 /* GKRegionPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56FF01F1A963F9100C628B3 /* GKRegionPickerViewController.m */; };
 		E5A126AA1A98654D0016AF23 /* GKAddressServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126A91A98654D0016AF23 /* GKAddressServiceImpl.m */; };
 		E5A126AE1A9868CA0016AF23 /* GKAddressContainerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126AD1A9868CA0016AF23 /* GKAddressContainerImpl.m */; };
 		E5A126DB1A98ADA00016AF23 /* GKAddressListController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A126C91A98ADA00016AF23 /* GKAddressListController.m */; };
@@ -78,6 +82,12 @@
 		E555C3BC1A9B5E1600836965 /* GKAddressRepositoryMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddressRepositoryMock.h; sourceTree = "<group>"; };
 		E555C3BD1A9B5E1600836965 /* GKAddressRepositoryMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAddressRepositoryMock.m; sourceTree = "<group>"; };
 		E56478991AA313E7006CE49A /* GKAddressRepositoryImplTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKAddressRepositoryImplTests.swift; sourceTree = "<group>"; };
+		E56D2BE21AA73373008380C9 /* AddressEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressEditController.h; sourceTree = "<group>"; };
+		E56D2BE31AA73373008380C9 /* AddressEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressEditController.m; sourceTree = "<group>"; };
+		E56D2BE61AA73373008380C9 /* AddressEditInputTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressEditInputTableViewCell.h; sourceTree = "<group>"; };
+		E56D2BE71AA73373008380C9 /* AddressEditInputTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressEditInputTableViewCell.m; sourceTree = "<group>"; };
+		E56D2BE81AA73373008380C9 /* AddressEditInputTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressEditInputTableViewCell.xib; sourceTree = "<group>"; };
+		E56D2BEA1AA73373008380C9 /* AddressEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressEditView.xib; sourceTree = "<group>"; };
 		E56FEFAE1A96293100C628B3 /* GKAddressKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GKAddressKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56FEFB21A96293100C628B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E56FEFB31A96293100C628B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,8 +128,8 @@
 		E56FF01B1A963F9100C628B3 /* GKTown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKTown.m; sourceTree = "<group>"; };
 		E56FF01C1A963F9100C628B3 /* GKVillage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKVillage.h; sourceTree = "<group>"; };
 		E56FF01D1A963F9100C628B3 /* GKVillage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKVillage.m; sourceTree = "<group>"; };
-		E56FF01E1A963F9100C628B3 /* GKRegionPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegionPickerView.h; sourceTree = "<group>"; };
-		E56FF01F1A963F9100C628B3 /* GKRegionPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegionPickerView.m; sourceTree = "<group>"; };
+		E56FF01E1A963F9100C628B3 /* GKRegionPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegionPickerViewController.h; sourceTree = "<group>"; };
+		E56FF01F1A963F9100C628B3 /* GKRegionPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRegionPickerViewController.m; sourceTree = "<group>"; };
 		E56FF0261A96402500C628B3 /* GKAddressService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddressService.h; sourceTree = "<group>"; };
 		E5A126A71A98649F0016AF23 /* GKRegionBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRegionBackend.h; sourceTree = "<group>"; };
 		E5A126A81A98654D0016AF23 /* GKAddressServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAddressServiceImpl.h; sourceTree = "<group>"; };
@@ -190,6 +200,51 @@
 				5C824CD0325FDBC328DC31F9 /* libPods-GKAddressKitExampleTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E56D2BE01AA73373008380C9 /* AddressEdit */ = {
+			isa = PBXGroup;
+			children = (
+				E56D2BE11AA73373008380C9 /* Controller */,
+				E56D2BE41AA73373008380C9 /* RegionPickerView */,
+				E56D2BE51AA73373008380C9 /* TableViewCell */,
+				E56D2BE91AA73373008380C9 /* View */,
+			);
+			path = AddressEdit;
+			sourceTree = "<group>";
+		};
+		E56D2BE11AA73373008380C9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E56D2BE21AA73373008380C9 /* AddressEditController.h */,
+				E56D2BE31AA73373008380C9 /* AddressEditController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E56D2BE41AA73373008380C9 /* RegionPickerView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RegionPickerView;
+			sourceTree = "<group>";
+		};
+		E56D2BE51AA73373008380C9 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E56D2BE61AA73373008380C9 /* AddressEditInputTableViewCell.h */,
+				E56D2BE71AA73373008380C9 /* AddressEditInputTableViewCell.m */,
+				E56D2BE81AA73373008380C9 /* AddressEditInputTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		E56D2BE91AA73373008380C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E56D2BEA1AA73373008380C9 /* AddressEditView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E56FEFA51A96293000C628B3 = {
@@ -282,6 +337,7 @@
 		E56FEFFA1A962D4400C628B3 /* GKAddressKit */ = {
 			isa = PBXGroup;
 			children = (
+				E56D2BE01AA73373008380C9 /* AddressEdit */,
 				E5A126C61A98ADA00016AF23 /* AddressList */,
 				E5A126A71A98649F0016AF23 /* GKRegionBackend.h */,
 				E56FEFFC1A962D7100C628B3 /* GKRegionBackendImpl.h */,
@@ -303,8 +359,8 @@
 				E56FF01B1A963F9100C628B3 /* GKTown.m */,
 				E56FF01C1A963F9100C628B3 /* GKVillage.h */,
 				E56FF01D1A963F9100C628B3 /* GKVillage.m */,
-				E56FF01E1A963F9100C628B3 /* GKRegionPickerView.h */,
-				E56FF01F1A963F9100C628B3 /* GKRegionPickerView.m */,
+				E56FF01E1A963F9100C628B3 /* GKRegionPickerViewController.h */,
+				E56FF01F1A963F9100C628B3 /* GKRegionPickerViewController.m */,
 				E56FF0261A96402500C628B3 /* GKAddressService.h */,
 				E5A126A81A98654D0016AF23 /* GKAddressServiceImpl.h */,
 				E5A126A91A98654D0016AF23 /* GKAddressServiceImpl.m */,
@@ -452,6 +508,8 @@
 				E56FEFBC1A96293100C628B3 /* Main.storyboard in Resources */,
 				E56FEFC11A96293100C628B3 /* LaunchScreen.xib in Resources */,
 				E56FEFBE1A96293100C628B3 /* Images.xcassets in Resources */,
+				E56D2BEE1AA73373008380C9 /* AddressEditView.xib in Resources */,
+				E56D2BED1AA73373008380C9 /* AddressEditInputTableViewCell.xib in Resources */,
 				E5A126DF1A98ADA00016AF23 /* AddressListView.xib in Resources */,
 				E5A126DD1A98ADA00016AF23 /* AddressListTableViewCell.xib in Resources */,
 				E56FEFF91A962B7A00C628B3 /* province.json in Resources */,
@@ -541,6 +599,7 @@
 				E56FF0071A963BD000C628B3 /* GKAddress.m in Sources */,
 				E56FEFF61A962B5A00C628B3 /* PersistenStack.swift in Sources */,
 				E56FEFEF1A962B5A00C628B3 /* AddressEntity.swift in Sources */,
+				E56D2BEB1AA73373008380C9 /* AddressEditController.m in Sources */,
 				E56FEFF01A962B5A00C628B3 /* AddressRepository.swift in Sources */,
 				E56FEFB71A96293100C628B3 /* GKAddressKitExample.xcdatamodeld in Sources */,
 				E56FEFE21A96297300C628B3 /* AreaPicker.swift in Sources */,
@@ -555,7 +614,7 @@
 				E56FEFFE1A962D7100C628B3 /* GKRegionBackendImpl.m in Sources */,
 				E5A126DC1A98ADA00016AF23 /* AddressListTableViewCell.m in Sources */,
 				E5A126AA1A98654D0016AF23 /* GKAddressServiceImpl.m in Sources */,
-				E56FF0251A963F9100C628B3 /* GKRegionPickerView.m in Sources */,
+				E56FF0251A963F9100C628B3 /* GKRegionPickerViewController.m in Sources */,
 				E5A126DE1A98ADA00016AF23 /* AddressListTableViewCellSelected.m in Sources */,
 				E56FF0201A963F9100C628B3 /* GKCity.m in Sources */,
 				E56FEFF31A962B5A00C628B3 /* FetchedResultsControllerDataSource.swift in Sources */,
@@ -564,6 +623,7 @@
 				E56FEFDE1A96297300C628B3 /* AddressCell.swift in Sources */,
 				E5A126EB1A98B9DD0016AF23 /* GKRegion.m in Sources */,
 				E5A126F21A98C5B70016AF23 /* GKAddressBackendMock.m in Sources */,
+				E56D2BEC1AA73373008380C9 /* AddressEditInputTableViewCell.m in Sources */,
 				E56FEFF51A962B5A00C628B3 /* ManagedObject+Extensions.swift in Sources */,
 				E56FEFE01A96297300C628B3 /* AddressEditViewController.swift in Sources */,
 				E510DDC91A9F6BD800B9EB19 /* GKAddressSynchronization.m in Sources */,

@@ -50,31 +50,33 @@
 
 - (RACSignal *)fetchCitiesWithProvinceID:(NSInteger)provinceID
 {
-  return
-  [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-    NSString *formatURL = @"http://cnregion.sinaapp.com/json/cities/%d/";
-    [self.manager
-     GET:[NSString stringWithFormat:formatURL, (int)provinceID] parameters:nil
-     success:^(AFHTTPRequestOperation *operation, id responseObject) {
-       NSMutableArray *provinces = [[NSMutableArray alloc] init];
-       GKProvince *province;
-       for (NSDictionary *provinceJSON in (NSArray *)responseObject) {
-         province = [[GKProvince alloc] init];
-         province.provinceID = [[provinceJSON objectForKey:@"id"] integerValue];
-         province.name = [provinceJSON objectForKey:@"name"];
-         [provinces addObject:province];
-       }
-       
-       [subscriber sendNext:provinces];
-       [subscriber sendCompleted];
-     }
-     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-       [subscriber sendError:error];
-       [subscriber sendCompleted];
-     }];
-    return [RACDisposable disposableWithBlock:^{
+    return
+    [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSString *formatURL = @"http://cnregion.sinaapp.com/json/cities/%d/";
+        NSString *url = [NSString stringWithFormat:formatURL, (int)provinceID];
+        [self.manager
+         GET:url
+         parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             NSMutableArray *cities = [[NSMutableArray alloc] init];
+             GKCity *city;
+             for (NSDictionary *cityJSON in (NSArray *)responseObject) {
+                 city = [[GKCity alloc] init];
+                 city.cityID = [[cityJSON objectForKey:@"id"] integerValue];
+                 city.name = [cityJSON objectForKey:@"name"];
+                 [cities addObject:city];
+             }
+             
+             [subscriber sendNext:cities];
+             [subscriber sendCompleted];
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             [subscriber sendError:error];
+             [subscriber sendCompleted];
+         }];
+        return [RACDisposable disposableWithBlock:^{
+        }];
     }];
-  }];
 }
 
 - (RACSignal *)fetchCountiesWithCityID:(NSInteger)cityID

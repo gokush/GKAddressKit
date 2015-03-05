@@ -9,33 +9,32 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "GKAddressService.h"
+#import "GKProvince.h"
+#import "GKCity.h"
+#import "GKCounty.h"
+#import "GKTown.h"
+#import "GKVillage.h"
 
-@class GKRegionPickerView;
-@protocol RegionPickerViewControllerDelegate <NSObject>
-
-//- (void)areaPickerViewController:(RegionPickerViewController *)picker
-//                   didSelectArea:(Region *)anArea;
-//
-//- (void)areaPickerViewController:(RegionPickerViewController *)picker
-//                         loading:(BOOL)isLoading;
-@end
-
-@interface GKRegionPickerView : UIPickerView
+@interface GKRegionPickerViewController : NSObject
 <UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (strong, nonatomic) UIPickerView *view;
 @property (strong, nonatomic) id<GKAddressService> service;
+@property (strong, nonatomic) UIPickerView *view;
 @property (strong, nonatomic) NSArray *province;
 @property (strong, nonatomic) NSArray *city;
 @property (strong, nonatomic) NSArray *county;
 @property (strong, nonatomic) NSArray *town;
 @property (strong, nonatomic) NSArray *village;
+@property (strong, nonatomic) GKProvince *selectedProvince;
+@property (strong, nonatomic) GKCity *selectedCity;
+@property (strong, nonatomic) GKCounty *selectedCounty;
+@property (strong, nonatomic) GKTown *selectedTown;
+@property (strong, nonatomic) GKVillage *selectedVillage;
 @property (strong, nonatomic) UIViewController *container;
-@property (strong, nonatomic) id<RegionPickerViewControllerDelegate> delegate;
+@property (assign, nonatomic) BOOL hasTown;
 
 - (void)show;
 - (void)reloadData;
 
-+ (instancetype)pickerWithViewController:(UIViewController *)viewController
-                                   areas:(NSArray *)anAreas;;
++ (instancetype)pickerWithViewController:(UIViewController *)viewController;
 @end

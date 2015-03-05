@@ -19,8 +19,7 @@ class ViewController: UIViewController, FetchedResultsControllerDataSourceDelega
     override func viewDidLoad() {
         super.viewDidLoad()
       
-      let controller:GKAddressListController =
-        GKAddressListController()
+        let controller:AddressEditController = AddressEditController()
       controller.service = GKAddressContainerMock().addressService()
       self.navigationController?.pushViewController(controller, animated: true)
       

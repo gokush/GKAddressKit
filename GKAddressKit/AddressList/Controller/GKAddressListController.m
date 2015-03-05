@@ -8,6 +8,7 @@
 
 #import "GKAddressListController.h"
 #import "AddressListTableViewCell.h"
+#import "AddressEditController.h"
 
 @interface GKAddressListController ()
 
@@ -19,7 +20,6 @@
 {
   self = [self initWithNibName:@"AddressListView" bundle:nil];
   if (self) {
-    
   }
   return self;
 }
@@ -62,10 +62,10 @@
 
 - (void)didTapAddAddress:(id)sender
 {
-  //  AddressEditController *controller;
-  //  controller = [[AddressEditController alloc] initWithAddress:nil
-  //                                                         user:self.user];
-  //  [self.navigationController pushViewController:controller animated:YES];
+    AddressEditController *controller;
+    controller = [[AddressEditController alloc]
+                  initWithAddress:nil user:self.user];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -102,12 +102,12 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  //  Address *address;
-  //  AddressEditController *controller;
-  //  address = self.addresses[indexPath.row];
-  //  controller = [[AddressEditController alloc] initWithAddress:address
-  //                                                         user:self.user];
-  //  [self.navigationController pushViewController:controller animated:YES];
+    GKAddress *address;
+    AddressEditController *controller;
+    address = self.addresses[indexPath.row];
+    controller = [[AddressEditController alloc]
+                  initWithAddress:address user:self.user];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 /*

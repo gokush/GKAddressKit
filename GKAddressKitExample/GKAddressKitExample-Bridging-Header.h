@@ -8,4 +8,5 @@
 #import "GKAddressContainerImpl.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "GKAddressListController.h"
+#import "AddressEditController.h"
 #import "GKAddressContainerMock.h"

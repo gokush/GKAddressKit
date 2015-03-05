@@ -6,9 +6,11 @@
 //  Copyright (c) 2014年 GKCommerce. All rights reserved.
 //
 
-#import "GKRegionPickerView.h"
+#import "GKRegionPickerViewController.h"
+#import "GKAddressContainer.h"
+#import "GKAddressContainerMock.h"
 
-@implementation GKRegionPickerView
+@implementation GKRegionPickerViewController
 
 - (id)init
 {
@@ -17,19 +19,16 @@
         self.view = [[UIPickerView alloc] init];
         self.view.dataSource = self;
         self.view.delegate   = self;
+        self.hasTown         = YES;
+        self.service = [[GKAddressContainerMock alloc] init].addressService;
+        [RACObserve(self, province) subscribeNext:^(id x) {
+            [self.view reloadComponent:0];
+        }];
+        [RACObserve(self, city) subscribeNext:^(id x) {
+            [self.view reloadComponent:1];
+        }];
     }
     return self;
-}
-
-- (void)setCountry:(NSArray *)areas
-{
-//    if (_country != areas) {
-//        _country = areas;
-//        if ([areas firstObject])
-//            self.province = [[areas firstObject] children];
-//        if (self.province)
-//            self.district = [[self.district firstObject] children];
-//    }
 }
 
 #pragma mark - UIPickerViewDataSource
@@ -37,13 +36,30 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component
 {
-//    if (0 == component && self.country && self.country.count > 0)
-//        return self.country.count;
-//    else if (1 == component && self.province)
-//        return self.province.count;
-//    else if (2 == component && self.district)
-//        return self.district.count;
-    return 0;
+    GKProvince *province;
+    NSInteger count = 0;
+    switch (component) {
+        case 0: {
+            count = self.province.count;
+            province = self.province.firstObject;
+            if (province.provinceID) {
+                [[self.service citiesWithProvinceID:province.provinceID]
+                 subscribeNext:^(id x) {
+                     // 如果用RAC会crash
+                    self.city = x;
+                }];
+                
+            }
+            break;
+        }
+        case 1: {
+            count = self.city.count;
+            break;
+        }
+        default:
+            break;
+    }
+    return count;
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -54,18 +70,17 @@ numberOfRowsInComponent:(NSInteger)component
 - (NSString *)pickerView:(UIPickerView *)pickerView
              titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-//    NSArray *current;
-//    if (0 == component)
-//        current = self.country;
-//    else if (1 == component)
-//        current = self.province;
-//    else if (2 == component)
-//        current = self.district;
-
-//    if (nil == current)
-//        return @"";
+    NSArray *current;
+    if (0 == component)
+        current = self.province;
+    else if (1 == component)
+        current = self.city;
+    else if (2 == component)
+        current = self.county;
+    else if (3 == component)
+        current = self.town;
   
-  return @"";
+    return ((GKRegion *)current[row]).name;
 }
 
 #pragma mark - UIPickerViewDelegate
@@ -73,26 +88,18 @@ numberOfRowsInComponent:(NSInteger)component
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
        inComponent:(NSInteger)component
 {
-//    switch (component) {
-//        case 0: {
-//            if (self.country)
-//                self.province = [[self.country objectAtIndex:row] children];
-//            if (self.province && [[self.province objectAtIndex:row] children])
-//                self.district = [[self.province objectAtIndex:row] children];
-//            [pickerView reloadComponent:1];
-//            [pickerView reloadComponent:2];
-//            break;
-//        }
-//        case 1: {
-//            if (self.province)
-//                self.district = [[self.province objectAtIndex:row] children];
-//            [pickerView reloadComponent:2];
-//            break;
-//        }
-//        default:
-//            break;
-//    }
-//    
+    switch (component) {
+        case 0: {
+//            self.service citiesWithProvinceID:
+            break;
+        }
+        case 1: {
+            break;
+        }
+        default:
+            break;
+    }
+//
 //    if (nil == self.district || 0 == self.district.count)
 //        return;
 //    
@@ -120,7 +127,7 @@ numberOfRowsInComponent:(NSInteger)component
         frame.origin.y = self.container.view.frame.size.height - 216;
         self.view.frame = frame;
     } completion:^(BOOL finished) {
-        
+        RAC(self, province) = [[self.service provinces] logAll];
     }];
 }
 
@@ -130,17 +137,11 @@ numberOfRowsInComponent:(NSInteger)component
 }
 
 + (instancetype)pickerWithViewController:(UIViewController *)viewController
-                                   areas:(NSArray *)anAreas
 {
-    GKRegionPickerView *picker = [[GKRegionPickerView alloc] init];
-    picker.country = anAreas;
+    GKRegionPickerViewController *picker;
+    picker = [[GKRegionPickerViewController alloc] init];
     picker.container = viewController;
-    
-    if ([viewController
-         conformsToProtocol:@protocol(RegionPickerViewControllerDelegate)])
-        
-        picker.delegate = (id<RegionPickerViewControllerDelegate>)viewController;
-    
+
     UIView *view = picker.view;
     CGRect frame = view.frame;
     frame.origin.y = viewController.view.frame.size.height;
