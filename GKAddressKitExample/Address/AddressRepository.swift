@@ -26,7 +26,7 @@ class AddressRepository: NSObject, GKAddressRepository {
         
     }
     */
-    
+    //查找用户的所有地址
     func findAddressesWithUser(user: GKUser!) -> RACSignal! {
         let fetchRequest = NSFetchRequest(entityName: "AddressEntity")
         fetchRequest.predicate = NSPredicate(format: "userId = \(user.userID)")
@@ -197,7 +197,55 @@ class AddressRepository: NSObject, GKAddressRepository {
     }
     
     func setDefault(address: GKAddress!) -> RACSignal! {
-        return nil
+        var success = true
+        let oldAddress = selectDefault(address.userID)
+        if oldAddress?.addressId == address.addressID{
+            success = false
+        }
+        else{
+            oldAddress?.isDefault = false
+            let newAddress = selectAddress(addressId: address.addressID)
+            newAddress.isDefault = true
+            save()
+        }
+        return RACSignal.createSignal({ (subscriber) -> RACDisposable! in
+            if success{
+                subscriber.sendNext(address)
+            }
+            else{
+                let error = NSError(domain: "set default address fail!!", code: 0, userInfo: nil)
+                subscriber.sendError(error)
+            }
+            subscriber.sendCompleted()
+            return nil
+        })
+    }
+    //查找默认地址
+    func findDefault(userId: Int) -> GKAddress!{
+        let addressEntity = selectDefault(userId)
+        var address: GKAddress?
+        if addressEntity != nil{
+            address = AddressUtils.gkAddress(addressEntity!)
+        }
+        return address
+    }
+    
+    func selectDefault(userId: Int) -> AddressEntity!{
+        let fetchRequest = NSFetchRequest(entityName: "AddressEntity")
+        fetchRequest.predicate = NSPredicate(format: "userId = \(userId) AND isDefault == true")
+        var error: NSError?
+        let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [AddressEntity]
+        let addressEntity = results?.last
+        return addressEntity
+    }
+    
+    func selectAddress(#addressId: Int) -> AddressEntity!{
+        let fetchRequest = NSFetchRequest(entityName: "AddressEntity")
+        fetchRequest.predicate = NSPredicate(format: "addressId = \(addressId)")
+        var error: NSError?
+        let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [AddressEntity]
+        let addressEntity = results?.last
+        return addressEntity
     }
     
     //添加新地址
