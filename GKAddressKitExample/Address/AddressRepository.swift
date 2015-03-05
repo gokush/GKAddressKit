@@ -26,7 +26,7 @@ class AddressRepository: NSObject, GKAddressRepository {
         
     }
     */
-    
+    //查找用户的所有地址
     func findAddressesWithUser(user: GKUser!) -> RACSignal! {
         let fetchRequest = NSFetchRequest(entityName: "AddressEntity")
         fetchRequest.predicate = NSPredicate(format: "userId = \(user.userID)")
@@ -50,7 +50,25 @@ class AddressRepository: NSObject, GKAddressRepository {
     }
     
     func findFailureAddressesWithUser(user: GKUser!) -> RACSignal! {
-        return nil
+        let fetchRequest = NSFetchRequest(entityName: "AddressEntity")
+        fetchRequest.predicate = NSPredicate(format: "userId = \(user.userID) AND sync = \(GKAddressSynchronizationFailure().code)")
+        var error: NSError?
+        let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [AddressEntity]
+        var addrArray = [GKAddress]()
+        if results != nil{
+            addrArray = AddressUtils.gkAddresses(results!)
+        }
+        return
+            RACSignal.createSignal({ (subscriber) -> RACDisposable! in
+                
+                subscriber.sendNext(addrArray)
+                subscriber.sendCompleted()
+                
+                return RACDisposable(block: { () -> Void in
+                    
+                })
+                
+            })
     }
     
     func create(address: GKAddress!) -> RACSignal! {
@@ -114,7 +132,34 @@ class AddressRepository: NSObject, GKAddressRepository {
         var error: NSError?
         let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [AddressEntity]
         let addressEntity = results?.last
-        return nil
+        if addressEntity != nil{
+            addressEntity?.name = address.name
+            addressEntity?.cellphone = address.cellPhone
+            addressEntity?.postcode = address.postcode
+            addressEntity?.address = address.address
+            addressEntity?.updateAt = NSDate()
+            let province = findProvinceWithId(address.province.provinceID)
+            if province != nil{
+                addressEntity?.addProvinceObject(province!)
+                province?.addAddressesObject(addressEntity!)
+                let city = findCityWithId(address.city.cityID, province: province!)
+                if city != nil{
+                    addressEntity?.addCityObject(city!)
+                    city?.addAddressesObject(addressEntity!)
+                    let district = findDistrict(address.county.countyID, city: city!)
+                    if district == nil{
+                        addressEntity?.addDistrictObject(district!)
+                        district?.addAddressesObject(addressEntity!)
+                    }
+                }
+            }
+            save()
+        }
+        return RACSignal.createSignal({ (subscriber) -> RACDisposable! in
+            subscriber.sendNext(address)
+            subscriber.sendCompleted()
+            return nil
+        })
     }
     
     func updatePrimary(address: GKAddress!) -> RACSignal! {
@@ -152,7 +197,55 @@ class AddressRepository: NSObject, GKAddressRepository {
     }
     
     func setDefault(address: GKAddress!) -> RACSignal! {
-        return nil
+        var success = true
+        let oldAddress = selectDefault(address.userID)
+        if oldAddress?.addressId == address.addressID{
+            success = false
+        }
+        else{
+            oldAddress?.isDefault = false
+            let newAddress = selectAddress(addressId: address.addressID)
+            newAddress.isDefault = true
+            save()
+        }
+        return RACSignal.createSignal({ (subscriber) -> RACDisposable! in
+            if success{
+                subscriber.sendNext(address)
+            }
+            else{
+                let error = NSError(domain: "set default address fail!!", code: 0, userInfo: nil)
+                subscriber.sendError(error)
+            }
+            subscriber.sendCompleted()
+            return nil
+        })
+    }
+    //查找默认地址
+    func findDefault(userId: Int) -> GKAddress!{
+        let addressEntity = selectDefault(userId)
+        var address: GKAddress?
+        if addressEntity != nil{
+            address = AddressUtils.gkAddress(addressEntity!)
+        }
+        return address
+    }
+    
+    func selectDefault(userId: Int) -> AddressEntity!{
+        let fetchRequest = NSFetchRequest(entityName: "AddressEntity")
+        fetchRequest.predicate = NSPredicate(format: "userId = \(userId) AND isDefault == true")
+        var error: NSError?
+        let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [AddressEntity]
+        let addressEntity = results?.last
+        return addressEntity
+    }
+    
+    func selectAddress(#addressId: Int) -> AddressEntity!{
+        let fetchRequest = NSFetchRequest(entityName: "AddressEntity")
+        fetchRequest.predicate = NSPredicate(format: "addressId = \(addressId)")
+        var error: NSError?
+        let results = managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [AddressEntity]
+        let addressEntity = results?.last
+        return addressEntity
     }
     
     //添加新地址

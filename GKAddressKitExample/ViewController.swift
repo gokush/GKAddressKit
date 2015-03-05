@@ -97,6 +97,18 @@ class ViewController: UIViewController, FetchedResultsControllerDataSourceDelega
             
         })
         
+        
+        addressRepository.findFailureAddressesWithUser(user).subscribeNext({ (array) -> Void in
+            
+            let addresses = array as [GKAddress]
+            for item in addresses{
+                println(item.localID)
+            }
+            
+        }, error: { (errors) -> Void in
+            
+        })
+        
 //        println("***************")
 //        
 //        addressRepository.findAddressesWithUser(user).subscribeNext({ (addresses) -> Void in
